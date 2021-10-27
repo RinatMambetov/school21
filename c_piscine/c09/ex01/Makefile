@@ -6,7 +6,7 @@
 #    By: greita <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/12 15:32:36 by greita            #+#    #+#              #
-#    Updated: 2021/09/12 16:10:15 by greita           ###   ########.fr        #
+#    Updated: 2021/10/10 11:04:20 by greita           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,8 @@ LIBC			= ar rc
 LIBR			= ranlib
 RM				= rm -f
 all:		 	obj ${NAME}
-#.c.o:
-#				${CC} ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
+.c.o:
+				${CC} ${CFLAGS} -c $< -o $(<:.c=.o) ${HEADER}
 obj: ${SRCS}
 ${SRC_DIR}%.o: ${SRC_DIR}%.c
 	${CC} ${CFLAGS} -c $< -o $@ ${HEADER}
