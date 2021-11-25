@@ -6,13 +6,13 @@
 #    By: greita <greita@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:29:31 by greita            #+#    #+#              #
-#    Updated: 2021/11/18 11:23:12 by greita           ###   ########.fr        #
+#    Updated: 2021/11/25 10:26:21 by greita           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = 		libft.a
 
-LIST = 		ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+LIST = 		ft_isdigit.c ft_isalpha.c ft_isalnum.c ft_isascii.c \
 			ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c \
 			ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c \
 			ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
@@ -33,10 +33,14 @@ CC =		gcc
 
 FLAGS =		-Wall -Wextra -Werror -O2
 
+D_FILES =	$(LIST:.c=.d) $(LIST_B:.c=.d)
+
 %.o :		%.c Makefile libft.h
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@ -MMD
 
 all :		$(NAME)
+
+-include	$(D_FILES)
 
 $(NAME) :	$(OBJ)
 	ar rcs $(NAME) $?
@@ -45,7 +49,7 @@ bonus :
 	@make OBJ="$(OBJ_B)" all
 
 clean :
-	rm -f $(OBJ) $(OBJ_B)
+	rm -f $(OBJ) $(OBJ_B) $(D_FILES)
 
 fclean :	clean
 	rm -f $(NAME)
