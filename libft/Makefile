@@ -6,7 +6,7 @@
 #    By: greita <greita@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:29:31 by greita            #+#    #+#              #
-#    Updated: 2021/11/25 10:26:21 by greita           ###   ########.fr        #
+#    Updated: 2021/12/09 10:02:09 by greita           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ FLAGS =		-Wall -Wextra -Werror -O2
 
 D_FILES =	$(LIST:.c=.d) $(LIST_B:.c=.d)
 
-%.o :		%.c Makefile libft.h
+%.o :		%.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@ -MMD
 
 all :		$(NAME)

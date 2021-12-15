@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+		{
+			"name": "(lldb) launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/test", //change filename
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"MIMode": "lldb",
+			"preLaunchTask": "${defaultBuildTask}"
+		}
+    ]
+}

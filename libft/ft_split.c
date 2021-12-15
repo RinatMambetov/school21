@@ -6,7 +6,7 @@
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 12:38:28 by greita            #+#    #+#             */
-/*   Updated: 2021/10/26 21:00:48 by greita           ###   ########.fr       */
+/*   Updated: 2021/12/09 09:56:43 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static char	**ft_arrfree(char **arr)
 		free(arr[i]);
 		i++;
 	}
-	free (arr);
+	free(arr);
 	return (NULL);
 }
 

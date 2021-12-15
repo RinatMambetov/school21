@@ -6,21 +6,21 @@
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 12:42:07 by greita            #+#    #+#             */
-/*   Updated: 2021/11/14 12:42:26 by greita           ###   ########.fr       */
+/*   Updated: 2021/12/15 16:01:23 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	split_lines(char **ptr_n, char **line, char ***lines)
+void	split_lines(char *ptr_n, char **line, char **lines)
 {
 	char	*temp;
 
-	**ptr_n = '\0';
-	*line = ft_strjoin(**lines, "\n");
-	temp = ft_strdup(*ptr_n + 1);
-	free(**lines);
-	**lines = temp;
+	*ptr_n = '\0';
+	*line = ft_strjoin(*lines, "\n");
+	temp = ft_strdup(ptr_n + 1);
+	free(*lines);
+	*lines = temp;
 }
 
 char	*get_line(char **lines)
@@ -41,7 +41,7 @@ char	*get_line(char **lines)
 		free(*lines);
 		return (*lines = NULL);
 	}
-	split_lines(&ptr_n, &line, &lines);
+	split_lines(ptr_n, &line, lines);
 	if (!line)
 		return (NULL);
 	if (!*lines)
@@ -77,7 +77,7 @@ char	*get_next_line(int fd)
 	bytes = 0;
 	if (!lines)
 	{
-		lines = malloc(1);
+		lines = malloc(sizeof(*lines));
 		if (!lines)
 			return (NULL);
 		*lines = '\0';

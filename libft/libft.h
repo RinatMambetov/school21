@@ -6,7 +6,7 @@
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 10:29:31 by greita            #+#    #+#             */
-/*   Updated: 2021/11/25 10:22:16 by greita           ###   ########.fr       */
+/*   Updated: 2021/12/09 09:56:00 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct s_list
 {
