@@ -166,6 +166,11 @@ mac=$(ip a | grep -m1 link/ether | awk '{print $2}')
 // -m1 - кол-во отражаемых строк
 - Количество команд, выполненных с помощью программы sudo
 sudocom=$(cat /var/log/sudo/sudo.log | grep "COMMAND=" | wc -l)
+- для срабатывания каждые 30 секунд
+* * * * * ( sleep 30 ; /path/to/executable param1 param2 )
+- чтобы не использовать в скипте wall
+* * * * * | wall
+и для каждой команды echo
 
 	НАСТРОЙКА CRON
 // добавляем скрипт в расписание

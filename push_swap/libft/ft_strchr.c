@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 20:01:21 by greita            #+#    #+#             */
-/*   Updated: 2022/02/03 10:38:16 by greita           ###   ########.fr       */
+/*   Created: 2021/10/16 09:52:02 by greita            #+#    #+#             */
+/*   Updated: 2021/11/18 11:08:48 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	*ft_strchr(const char *s, int c)
 {
-	t_list	*temp;
+	char	*str;
 
-	temp = *lst;
-	if (!lst || !new)
-		return ;
-	if (!*lst)
+	str = (char *)s;
+	if (c == '\0')
+		return (str + ft_strlen(str));
+	while (*str)
 	{
-		*lst = new;
-		return ;
+		if (*str == (char)c)
+			return (str);
+		str++;
 	}
-	while (temp -> next)
-	{
-		temp = temp -> next;
-	}
-	temp -> next = new;
-	new -> next = NULL;
+	return (NULL);
 }

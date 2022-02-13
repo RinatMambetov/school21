@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 20:01:21 by greita            #+#    #+#             */
-/*   Updated: 2022/02/03 10:38:16 by greita           ###   ########.fr       */
+/*   Created: 2021/10/15 17:53:34 by greita            #+#    #+#             */
+/*   Updated: 2021/10/26 17:27:13 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	t_list	*temp;
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
-	temp = *lst;
-	if (!lst || !new)
-		return ;
-	if (!*lst)
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = 0;
+	j = dst_len;
+	if (dstsize > 0 && dst_len < (dstsize - 1))
 	{
-		*lst = new;
-		return ;
+		while (src[i] && (dst_len + i) < (dstsize - 1))
+		{
+			dst[j] = src[i];
+			j++;
+			i++;
+		}
+		dst[j] = '\0';
 	}
-	while (temp -> next)
-	{
-		temp = temp -> next;
-	}
-	temp -> next = new;
-	new -> next = NULL;
+	if (dst_len >= dstsize)
+		dst_len = dstsize;
+	return (dst_len + src_len);
 }

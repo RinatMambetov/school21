@@ -6,7 +6,7 @@
 #    By: greita <greita@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:29:31 by greita            #+#    #+#              #
-#    Updated: 2022/02/07 08:46:43 by greita           ###   ########.fr        #
+#    Updated: 2022/02/09 12:07:44 by greita           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,21 +19,19 @@ LIST = 		ft_isdigit.c ft_isalpha.c ft_isalnum.c ft_isascii.c \
 			ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
 			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 			ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-			ft_putendl_fd.c ft_putnbr_fd.c
-
-LIST_B =	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+			ft_putendl_fd.c ft_putnbr_fd.c \
+			ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+			ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+			get_next_line.c
 
 OBJ = 		$(LIST:.c=.o)
 
-OBJ_B =		$(LIST_B:.c=.o)
-
 CC =		gcc
 
-FLAGS =		-Wall -Wextra -Werror -O2
+FLAGS =		-Wall -Wextra -Werror
 
-D_FILES =	$(LIST:.c=.d) $(LIST_B:.c=.d)
+D_FILES =	$(LIST:.c=.d)
 
 %.o :		%.c
 	$(CC) $(FLAGS) -c $< -o $@ -MMD
@@ -45,15 +43,12 @@ all :		$(NAME)
 $(NAME) :	$(OBJ)
 	ar rcs $(NAME) $?
 
-bonus :
-	@make OBJ="$(OBJ_B)" all
-
 clean :
-	rm -f $(OBJ) $(OBJ_B) $(D_FILES)
+	rm -f $(OBJ) $(D_FILES)
 
 fclean :	clean
 	rm -f $(NAME)
 
 re :		fclean all
 
-.PHONY :	all clean fclean re bonus
+.PHONY :	all clean fclean re

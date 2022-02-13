@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 20:01:21 by greita            #+#    #+#             */
-/*   Updated: 2022/02/03 10:38:16 by greita           ###   ########.fr       */
+/*   Created: 2021/10/17 10:52:16 by greita            #+#    #+#             */
+/*   Updated: 2021/10/17 11:07:17 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	t_list	*temp;
+	char	*str;
+	size_t	i;
 
-	temp = *lst;
-	if (!lst || !new)
-		return ;
-	if (!*lst)
+	i = 0;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s) || len == 0)
+		return (ft_calloc(1, sizeof(char)));
+	if (len > (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	while (i < len)
 	{
-		*lst = new;
-		return ;
+		str[i] = s[start + i];
+		i++;
 	}
-	while (temp -> next)
-	{
-		temp = temp -> next;
-	}
-	temp -> next = new;
-	new -> next = NULL;
+	str[i] = '\0';
+	return ((char *)str);
 }

@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 20:01:21 by greita            #+#    #+#             */
-/*   Updated: 2022/02/03 10:38:16 by greita           ###   ########.fr       */
+/*   Created: 2021/10/20 11:50:13 by greita            #+#    #+#             */
+/*   Updated: 2021/11/18 09:38:26 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_putnbr_fd(int n, int fd)
 {
-	t_list	*temp;
+	unsigned int	num;
 
-	temp = *lst;
-	if (!lst || !new)
+	if (fd < 0)
 		return ;
-	if (!*lst)
+	num = n;
+	if (n < 0)
 	{
-		*lst = new;
-		return ;
+		write(fd, "-", 1);
+		num *= -1;
 	}
-	while (temp -> next)
-	{
-		temp = temp -> next;
-	}
-	temp -> next = new;
-	new -> next = NULL;
+	if (num > 9)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd((num % 10 + '0'), fd);
 }

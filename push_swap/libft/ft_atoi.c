@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 20:01:21 by greita            #+#    #+#             */
-/*   Updated: 2022/02/03 10:38:16 by greita           ###   ########.fr       */
+/*   Created: 2021/10/17 09:03:44 by greita            #+#    #+#             */
+/*   Updated: 2021/12/09 09:55:45 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_atoi(const char *str)
 {
-	t_list	*temp;
+	int				neg;
+	unsigned int	num;
 
-	temp = *lst;
-	if (!lst || !new)
-		return ;
-	if (!*lst)
+	neg = 1;
+	num = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '-')
+		neg = -1;
+	if (*str == '+' || *str == '-')
+		str++;
+	while (ft_isdigit(*str))
 	{
-		*lst = new;
-		return ;
+		num = num * 10 + (*str - '0');
+		str++;
 	}
-	while (temp -> next)
-	{
-		temp = temp -> next;
-	}
-	temp -> next = new;
-	new -> next = NULL;
+	if (num - 1 > INT_MAX && neg == -1)
+		return ((int)(-num));
+	if (num > INT_MAX && neg == 1)
+		return ((int)num);
+	return (neg * num);
 }
