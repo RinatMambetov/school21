@@ -1,0 +1,3289 @@
+Already up to date.
+make CFLAGS="-Wall -Wextra -g3 -Werror" -C ../ bonus
+make[1]: Nothing to be done for `bonus'.
+make -C ../
+make[1]: Nothing to be done for `all'.
+make -C libtest CFLAGS="-Wall -Wextra -g3"
+make[1]: Nothing to be done for `all'.
+clang -Wall -Wextra -g3  -L./libtest -L../ ./obj/main.o ./obj/tests.o ./obj/get_next_line.o ./obj/get_next_line_utils.o ./obj/utils.o ./obj/malloc_count.o -o tester -ltest -lftprintf -ldl
+mkdir -p files
+./tester b1 nosan mix 2>myleaks.txt
+[1mbasic test: [0m
+  [32m1.[1mOK[0m [1m
+%c and widths: [0m
+  [32m102.[1mOK[0m [32m103.[1mOK[0m [32m104.[1mOK[0m [32m105.[1mOK[0m [32m106.[1mOK[0m [32m107.[1mOK[0m [32m108.[1mOK[0m [32m109.[1mOK[0m [32m110.[1mOK[0m [1m
+%s and widths: [0m
+  [32m111.[1mOK[0m [32m112.[1mOK[0m [32m113.[1mOK[0m [32m114.[1mOK[0m [32m115.[1mOK[0m [32m116.[1mOK[0m [32m117.[1mOK[0m [32m118.[1mOK[0m [32m119.[1mOK[0m [32m120.[1mOK[0m [32m121.[1mOK[0m [32m122.[1mOK[0m [32m123.[1mOK[0m [32m124.[1mOK[0m [32m125.[1mOK[0m [32m126.[1mOK[0m [32m127.[1mOK[0m [32m128.[1mOK[0m [32m129.[1mOK[0m [32m130.[1mOK[0m [1m
+%p and widths: [0m
+  [32m131.[1mOK[0m [32m132.[1mOK[0m [32m133.[1mOK[0m [32m134.[1mOK[0m [32m135.[1mOK[0m [32m136.[1mOK[0m [32m137.[1mOK[0m [32m138.[1mOK[0m [32m139.[1mOK[0m [32m140.[1mOK[0m [32m141.[1mOK[0m [32m142.[1mOK[0m [32m143.[1mOK[0m [32m144.[1mOK[0m [32m145.[1mOK[0m [32m146.[1mOK[0m [32m147.[1mOK[0m [32m148.[1mOK[0m [32m149.[1mOK[0m [32m150.[1mOK[0m [32m151.[1mOK[0m [1m
+%d and widths: [0m
+  [32m152.[1mOK[0m [32m153.[1mOK[0m [32m154.[1mOK[0m [32m155.[1mOK[0m [32m156.[1mOK[0m [32m157.[1mOK[0m [32m158.[1mOK[0m [32m159.[1mOK[0m [32m160.[1mOK[0m [32m161.[1mOK[0m [32m162.[1mOK[0m [32m163.[1mOK[0m [32m164.[1mOK[0m [32m165.[1mOK[0m [32m166.[1mOK[0m [32m167.[1mOK[0m [32m168.[1mOK[0m [32m169.[1mOK[0m [32m170.[1mOK[0m [1m
+%i and widths: [0m
+  [32m171.[1mOK[0m [32m172.[1mOK[0m [32m173.[1mOK[0m [32m174.[1mOK[0m [32m175.[1mOK[0m [32m176.[1mOK[0m [32m177.[1mOK[0m [32m178.[1mOK[0m [32m179.[1mOK[0m [32m180.[1mOK[0m [32m181.[1mOK[0m [32m182.[1mOK[0m [32m183.[1mOK[0m [32m184.[1mOK[0m [32m185.[1mOK[0m [32m186.[1mOK[0m [32m187.[1mOK[0m [32m188.[1mOK[0m [32m189.[1mOK[0m [1m
+%u and widths: [0m
+  [32m190.[1mOK[0m [32m191.[1mOK[0m [32m192.[1mOK[0m [32m193.[1mOK[0m [32m194.[1mOK[0m [32m195.[1mOK[0m [32m196.[1mOK[0m [32m197.[1mOK[0m [32m198.[1mOK[0m [32m199.[1mOK[0m [32m200.[1mOK[0m [32m201.[1mOK[0m [1m
+%x and widths: [0m
+  [32m202.[1mOK[0m [32m203.[1mOK[0m [32m204.[1mOK[0m [32m205.[1mOK[0m [32m206.[1mOK[0m [32m207.[1mOK[0m [32m208.[1mOK[0m [32m209.[1mOK[0m [32m210.[1mOK[0m [32m211.[1mOK[0m [32m212.[1mOK[0m [32m213.[1mOK[0m [32m214.[1mOK[0m [32m215.[1mOK[0m [32m216.[1mOK[0m [32m217.[1mOK[0m [32m218.[1mOK[0m [32m219.[1mOK[0m [32m220.[1mOK[0m [32m221.[1mOK[0m [32m222.[1mOK[0m [1m
+%X and widths: [0m
+  [32m223.[1mOK[0m [32m224.[1mOK[0m [32m225.[1mOK[0m [32m226.[1mOK[0m [32m227.[1mOK[0m [32m228.[1mOK[0m [32m229.[1mOK[0m [32m230.[1mOK[0m [32m231.[1mOK[0m [32m232.[1mOK[0m [32m233.[1mOK[0m [32m234.[1mOK[0m [32m235.[1mOK[0m [32m236.[1mOK[0m [32m237.[1mOK[0m [32m238.[1mOK[0m [32m239.[1mOK[0m [32m240.[1mOK[0m [32m241.[1mOK[0m [32m242.[1mOK[0m [32m243.[1mOK[0m [1m
+%s and precisions: [0m
+  [32m244.[1mOK[0m [32m245.[1mOK[0m [32m246.[1mOK[0m [32m247.[1mOK[0m [32m248.[1mOK[0m [32m249.[1mOK[0m [32m250.[1mOK[0m [32m251.[1mOK[0m [32m252.[1mOK[0m [32m253.[1mOK[0m [32m254.[1mOK[0m [32m255.[1mOK[0m [32m256.[1mOK[0m [32m257.[1mOK[0m [32m258.[1mOK[0m [32m259.[1mOK[0m [32m260.[1mOK[0m [32m261.[1mOK[0m [32m262.[1mOK[0m [32m263.[1mOK[0m [32m264.[1mOK[0m [32m265.[1mOK[0m [32m266.[1mOK[0m [32m267.[1mOK[0m [32m268.[1mOK[0m [32m269.[1mOK[0m [32m270.[1mOK[0m [1m
+%d and precisions: [0m
+  [32m271.[1mOK[0m [32m272.[1mOK[0m [32m273.[1mOK[0m [32m274.[1mOK[0m [32m275.[1mOK[0m [32m276.[1mOK[0m [32m277.[1mOK[0m [32m278.[1mOK[0m [32m279.[1mOK[0m [32m280.[1mOK[0m [32m281.[1mOK[0m [32m282.[1mOK[0m [32m283.[1mOK[0m [32m284.[1mOK[0m [32m285.[1mOK[0m [32m286.[1mOK[0m [32m287.[1mOK[0m [32m288.[1mOK[0m [32m289.[1mOK[0m [32m290.[1mOK[0m [32m291.[1mOK[0m [32m292.[1mOK[0m [32m293.[1mOK[0m [32m294.[1mOK[0m [32m295.[1mOK[0m [32m296.[1mOK[0m [32m297.[1mOK[0m [32m298.[1mOK[0m [32m299.[1mOK[0m [32m300.[1mOK[0m [32m301.[1mOK[0m [1m
+%i and precisions: [0m
+  [32m302.[1mOK[0m [32m303.[1mOK[0m [32m304.[1mOK[0m [32m305.[1mOK[0m [32m306.[1mOK[0m [32m307.[1mOK[0m [32m308.[1mOK[0m [32m309.[1mOK[0m [32m310.[1mOK[0m [32m311.[1mOK[0m [32m312.[1mOK[0m [32m313.[1mOK[0m [32m314.[1mOK[0m [32m315.[1mOK[0m [32m316.[1mOK[0m [32m317.[1mOK[0m [32m318.[1mOK[0m [32m319.[1mOK[0m [32m320.[1mOK[0m [32m321.[1mOK[0m [32m322.[1mOK[0m [32m323.[1mOK[0m [32m324.[1mOK[0m [32m325.[1mOK[0m [32m326.[1mOK[0m [32m327.[1mOK[0m [32m328.[1mOK[0m [32m329.[1mOK[0m [32m330.[1mOK[0m [32m331.[1mOK[0m [32m332.[1mOK[0m [32m333.[1mOK[0m [1m
+%u and precisions: [0m
+  [32m334.[1mOK[0m [32m335.[1mOK[0m [32m336.[1mOK[0m [32m337.[1mOK[0m [32m338.[1mOK[0m [32m339.[1mOK[0m [32m340.[1mOK[0m [32m341.[1mOK[0m [32m342.[1mOK[0m [32m343.[1mOK[0m [32m344.[1mOK[0m [32m345.[1mOK[0m [32m346.[1mOK[0m [32m347.[1mOK[0m [32m348.[1mOK[0m [32m349.[1mOK[0m [32m350.[1mOK[0m [32m351.[1mOK[0m [32m352.[1mOK[0m [32m353.[1mOK[0m [32m354.[1mOK[0m [32m355.[1mOK[0m [32m356.[1mOK[0m [32m357.[1mOK[0m [32m358.[1mOK[0m [32m359.[1mOK[0m [32m360.[1mOK[0m [32m361.[1mOK[0m [32m362.[1mOK[0m [32m363.[1mOK[0m [32m364.[1mOK[0m [1m
+%x and precisions: [0m
+  [32m365.[1mOK[0m [32m366.[1mOK[0m [32m367.[1mOK[0m [32m368.[1mOK[0m [32m369.[1mOK[0m [32m370.[1mOK[0m [32m371.[1mOK[0m [32m372.[1mOK[0m [32m373.[1mOK[0m [32m374.[1mOK[0m [32m375.[1mOK[0m [32m376.[1mOK[0m [32m377.[1mOK[0m [32m378.[1mOK[0m [32m379.[1mOK[0m [32m380.[1mOK[0m [32m381.[1mOK[0m [32m382.[1mOK[0m [32m383.[1mOK[0m [32m384.[1mOK[0m [32m385.[1mOK[0m [32m386.[1mOK[0m [32m387.[1mOK[0m [32m388.[1mOK[0m [32m389.[1mOK[0m [32m390.[1mOK[0m [32m391.[1mOK[0m [32m392.[1mOK[0m [32m393.[1mOK[0m [32m394.[1mOK[0m [32m395.[1mOK[0m [32m396.[1mOK[0m [32m397.[1mOK[0m [1m
+%X and precisions: [0m
+  [32m398.[1mOK[0m [32m399.[1mOK[0m [32m400.[1mOK[0m [32m401.[1mOK[0m [32m402.[1mOK[0m [32m403.[1mOK[0m [32m404.[1mOK[0m [32m405.[1mOK[0m [32m406.[1mOK[0m [32m407.[1mOK[0m [32m408.[1mOK[0m [32m409.[1mOK[0m [32m410.[1mOK[0m [32m411.[1mOK[0m [32m412.[1mOK[0m [32m413.[1mOK[0m [32m414.[1mOK[0m [32m415.[1mOK[0m [32m416.[1mOK[0m [32m417.[1mOK[0m [32m418.[1mOK[0m [32m419.[1mOK[0m [32m420.[1mOK[0m [32m421.[1mOK[0m [32m422.[1mOK[0m [32m423.[1mOK[0m [32m424.[1mOK[0m [32m425.[1mOK[0m [32m426.[1mOK[0m [32m427.[1mOK[0m [32m428.[1mOK[0m [32m429.[1mOK[0m [32m430.[1mOK[0m [1m
+%c, widths and -: [0m
+  [1m[31m
+  431.KO (Wrong output) (Wrong return)
+[0m        Expected: [p], return: 1
+        Got:      [[1m[31m-c[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 431[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-c"[0m, [32m'p'[0m);
+[1m[31m
+  432.KO (Wrong output) (Wrong return)
+[0m        Expected: [b], return: 1
+        Got:      [[1m[31m-1c[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 432[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1c"[0m, [32m'b'[0m);
+[1m[31m
+  433.KO (Wrong output) (Wrong return)
+[0m        Expected: [w    ], return: 5
+        Got:      [[1m[31m-5c[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 433[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-5c"[0m, [32m'w'[0m);
+[1m[31m
+  434.KO (Wrong output) (Wrong return)
+[0m        Expected: [ kk daoraw    blz], return: 17
+        Got:      [ kk daora[1m[31m-5cblz[0m], return: 15
+     [0m[1mYou can rerun this test with [0m[33msh test 434[0m
+     The function was called like this:
+   [34mft_printf[0m([32m" kk daora%-5cblz"[0m, [32m'w'[0m);
+[1m[31m
+  435.KO (Wrong output) (Wrong return)
+[0m        Expected: [w                   arigatou], return: 28
+        Got:      [[1m[31m-20carigatou[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 435[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-20carigatou"[0m, [32m'w'[0m);
+[1m[31m
+  436.KO (Wrong output) (Wrong return)
+[0m        Expected: [abc   d          ], return: 17
+        Got:      [[1m[31m-c-c-4c-11c[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 436[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-c%-c%-4c%-11c"[0m, [32m'a'[0m, [32m'b'[0m, [32m'c'[0m, [32m'd'[0m);
+[1m[31m
+  437.KO (Wrong output) (Wrong return)
+[0m        Expected: [aibp   csd          x], return: 21
+        Got:      [[1m[31m-ci-cp[0m [1m[31m  as-11cx[0m], return: 16
+     [0m[1mYou can rerun this test with [0m[33msh test 437[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-ci%-cp%4cs%-11cx"[0m, [32m'a'[0m, [32m'b'[0m, [32m'c'[0m, [32m'd'[0m);
+[1m[31m
+  438.KO (Wrong output) (Wrong return)
+[0m        Expected: [aibp   csd          x], return: 21
+        Got:      [[1m[31m----ci---cp[0m   [1m[31mas--11cx[0m], return: 22
+     [0m[1mYou can rerun this test with [0m[33msh test 438[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%----ci%---cp%4cs%--11cx"[0m, [32m'a'[0m, [32m'b'[0m, [32m'c'[0m, [32m'd'[0m);
+[1m[31m
+  439.KO (Wrong output) (Wrong return)
+[0m        Expected: [[35m\0[0m1[35m\1[0m*], return: 4
+        Got:      [[1m[31m-[1m[31mc[1m[31m-[1m[31mc[1m[31m[1m[35m\0[0m[1m[31m*[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 439[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-c%-c%c*"[0m, [33m0[0m, [32m'1'[0m, [33m1[0m);
+[1m[31m
+  440.KO (Wrong output)
+[0m        Expected: [[35m\0[0m a  [35m\0[0m   *], return: 10
+        Got:      [[1m[31m-[1m[31m2[1m[31mc[1m[31m-[1m[31m3[1m[31mc[1m[31m-[1m[31m4[1m[31mc[1m[31m*[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 440[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-2c%-3c%-4c*"[0m, [33m0[0m, [32m'a'[0m, [33m0[0m);
+[1m
+%s, widths, precisions and -: [0m
+  [1m[31m
+  441.KO (Wrong output) (Wrong return)
+[0m        Expected: [Aperture Science!], return: 17
+        Got:      [[1m[31m-9sScience![0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 441[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-9sScience!"[0m, [32m"Aperture"[0m);
+[1m[31m
+  442.KO (Wrong output) (Wrong return)
+[0m        Expected: [We do what we     must, because we can                 ], return: 55
+        Got:      [We [1m[31m-s[0m what we     [1m[31m  do[0m, [1m[31m-2s we -20s[0m], return: 35
+     [0m[1mYou can rerun this test with [0m[33msh test 442[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"We %-s what we %8s, %-2s we %-20s"[0m, [32m"do"[0m, [32m"must"[0m, [32m"because"[0m, [32m"can"[0m);
+[1m[31m
+  443.KO (Wrong output) (Wrong return)
+[0m        Expected: [for  the goooood   of aaall of us   ], return: 36
+        Got:      [[1m[31m--4s[0m [1m[31mfor[0m [1m[31m------------------9s of the of[0m [1m[31m-5s[0m], return: 43
+     [0m[1mYou can rerun this test with [0m[33msh test 443[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%--4s %s %------------------9s of %s of %-5s"[0m, [32m"for"[0m, [32m"the"[0m, [32m"goooood"[0m, [32m"aaall"[0m, [32m"us"[0m);
+[1m[31m
+  444.KO (Wrong output) (Wrong return)
+[0m        Expected: [f    the goo       of aaall of us   ], return: 36
+        Got:      [[1m[31m--4.1s for ------------------9.3[0ms [1m[31mof the[0m [1m[31mof[0m [1m[31m-5.7s[0m], return: 49
+     [0m[1mYou can rerun this test with [0m[33msh test 444[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%--4.1s %s %------------------9.3s of %s of %-5.7s"[0m, [32m"for"[0m, [32m"the"[0m, [32m"goooood"[0m, [32m"aaall"[0m, [32m"us"[0m);
+[1m[31m
+  445.KO (Wrong output) (Wrong return)
+[0m        Expected: [p--.su kkkk], return: 11
+        Got:      [[1m[31m-[0m-[1m[31m.sp--.su kkkk[0m], return: 15
+     [0m[1mYou can rerun this test with [0m[33msh test 445[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%--.sp--.su kkkk"[0m, [32m"pegadinha po"[0m);
+[1m[31m
+  446.KO (Wrong output) (Wrong return)
+[0m        Expected: [-42      Science!], return: 17
+        Got:      [-[1m[31m9sScience![0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 446[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-9sScience!"[0m, [32m"-42"[0m);
+[1m
+%p, widths and -: [0m
+  [1m[31m
+  447.KO (Wrong output) (Wrong return)
+[0m        Expected: [that's the way it 0x104a50fe5         is], return: 40
+        Got:      [that's the way it [1m[31m-20pis[0m], return: 24
+     [0m[1mYou can rerun this test with [0m[33msh test 447[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"that'[0ms the way it %-[33m20[0mpis[32m", "[0m[32m");
+[1m[31m
+  448.KO (Wrong output) (Wrong return)
+[0m        Expected: [as soon as 0xffffffffffffffffossible], return: 36
+        Got:      [as soon as [1m[31m-10possible[0m], return: 22
+     [0m[1mYou can rerun this test with [0m[33msh test 448[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"as soon as %-10possible"[0m, (void *) -[33m1[0m);
+[1m[31m
+  449.KO (Wrong output) (Wrong return)
+[0m        Expected: [as soon as 0xc000000000f   easible], return: 34
+        Got:      [as soon as [1m[31m-16peasible[0m], return: 22
+     [0m[1mYou can rerun this test with [0m[33msh test 449[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"as soon as %-16peasible"[0m, (void *) (((long int)[33m3[0m << [33m42[0m) + [33m15[0m));
+[1m[31m
+  450.KO (Wrong output) (Wrong return)
+[0m        Expected: [as soon as 0xc000000000f   easible], return: 34
+        Got:      [as soon as [1m[31m-16peasible[0m], return: 22
+     [0m[1mYou can rerun this test with [0m[33msh test 450[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"as soon as %-16peasible"[0m, (void *) (((long int)[33m3[0m << [33m42[0m) + [33m15[0m));
+[1m[31m
+  451.KO (Wrong output) (Wrong return)
+[0m        Expected: [thats 0xdsrobably not a good idea], return: 33
+        Got:      [thats [1m[31m-psrobably not a go[0mo[1m[31md idea[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 451[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"thats %-psrobably not a good idea"[0m, (void *) [33m13[0m);
+[1m[31m
+  452.KO (Wrong output) (Wrong return)
+[0m        Expected: [0xd                  whoa wtf is that], return: 37
+        Got:      [[1m[31m------21pwhoa[0m [1m[31mwtf[0m [1m[31mis[0m [1m[31mt[0mh[1m[31mat[0m], return: 25
+     [0m[1mYou can rerun this test with [0m[33msh test 452[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%------21pwhoa wtf is that"[0m, (void *) [33m13[0m);
+[1m[31m
+  453.KO (Wrong output) (Wrong return)
+[0m        Expected: [0xd                   yeah i'm 0x41 running out 0xffffffffffffffff of ideas], return: 75
+        Got:      [[1m[31m------21p[0m [1m[31myeah[0m [1m[31mi'm[0m [1m[31m0xd runn[0mi[1m[31mng[0m [1m[31mout --p of ideas[0m], return: 47
+     [0m[1mYou can rerun this test with [0m[33msh test 453[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%------21p yeah i'[0mm %p running out %--p of ideas[32m", (void *) 13, (void *) 65, (void *) -1);
+[1m
+%d, widths, precisions and -: [0m
+  [1m[31m
+  454.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-d[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 454[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, [33m0[0m);
+[1m[31m
+  455.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-d[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 455[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, [33m1[0m);
+[1m[31m
+  456.KO (Wrong output)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-d[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 456[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, [33m10[0m);
+[1m[31m
+  457.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10], return: 3
+        Got:      [-[1m[31md[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 457[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, -[33m10[0m);
+[1m[31m
+  458.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-d[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 458[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, [33m5000[0m);
+[1m[31m
+  459.KO (Wrong output) (Wrong return)
+[0m        Expected: [-5000], return: 5
+        Got:      [-[1m[31md[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 459[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, -[33m5000[0m);
+[1m[31m
+  460.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31md[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 460[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  461.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-d[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 461[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-d"[0m, [33m2147483647[0m);
+[1m[31m
+  462.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-[0m1[1m[31md[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 462[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, [33m0[0m);
+[1m[31m
+  463.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-[0m1[1m[31md[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 463[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, [33m1[0m);
+[1m[31m
+  464.KO (Wrong output) (Wrong return)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-1d[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 464[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, [33m10[0m);
+[1m[31m
+  465.KO (Wrong output)
+[0m        Expected: [-10], return: 3
+        Got:      [-1[1m[31md[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 465[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, -[33m10[0m);
+[1m[31m
+  466.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-1d[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 466[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, [33m5000[0m);
+[1m[31m
+  467.KO (Wrong output) (Wrong return)
+[0m        Expected: [-5000], return: 5
+        Got:      [-[1m[31m1d[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 467[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, -[33m5000[0m);
+[1m[31m
+  468.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m1d[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 468[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  469.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31md[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 469[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1d"[0m, [33m2147483647[0m);
+[1m[31m
+  470.KO (Wrong output) (Wrong return)
+[0m        Expected: [0         ], return: 10
+        Got:      [[1m[31m-10d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 470[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, [33m0[0m);
+[1m[31m
+  471.KO (Wrong output) (Wrong return)
+[0m        Expected: [1         ], return: 10
+        Got:      [[1m[31m-10d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 471[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, [33m1[0m);
+[1m[31m
+  472.KO (Wrong output) (Wrong return)
+[0m        Expected: [10        ], return: 10
+        Got:      [[1m[31m-10d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 472[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, [33m10[0m);
+[1m[31m
+  473.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10       ], return: 10
+        Got:      [-10[1m[31md[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 473[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, -[33m10[0m);
+[1m[31m
+  474.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000      ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31md[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 474[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, [33m5000[0m);
+[1m[31m
+  475.KO (Wrong output) (Wrong return)
+[0m        Expected: [-5000     ], return: 10
+        Got:      [-[1m[31m1[0m0[1m[31md[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 475[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, -[33m5000[0m);
+[1m[31m
+  476.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m10d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 476[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  477.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 477[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10d"[0m, [33m2147483647[0m);
+[1m[31m
+  478.KO (Wrong output) (Wrong return)
+[0m        Expected: [], return: 0
+        Got:      [[1m[31m-.d[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 478[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.d"[0m, [33m0[0m);
+[1m[31m
+  479.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-.1d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 479[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.1d"[0m, [33m1[0m);
+[1m[31m
+  480.KO (Wrong output) (Wrong return)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-.2d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 480[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.2d"[0m, [33m10[0m);
+[1m[31m
+  481.KO (Wrong output)
+[0m        Expected: [-010], return: 4
+        Got:      [-[1m[31m.3d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 481[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.3d"[0m, -[33m10[0m);
+[1m[31m
+  482.KO (Wrong output)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-.4d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 482[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.4d"[0m, [33m5000[0m);
+[1m[31m
+  483.KO (Wrong output) (Wrong return)
+[0m        Expected: [-05000], return: 6
+        Got:      [-[1m[31m.[0m5[1m[31md[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 483[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.5d"[0m, -[33m5000[0m);
+[1m[31m
+  484.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m.6d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 484[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.6d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  485.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-.7d[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 485[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.7d"[0m, [33m2147483647[0m);
+[1m[31m
+  486.KO (Wrong output) (Wrong return)
+[0m        Expected: [00000000], return: 8
+        Got:      [[1m[31m-1.8d[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 486[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.8d"[0m, [33m0[0m);
+[1m[31m
+  487.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000001], return: 9
+        Got:      [[1m[31m-1.9d[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 487[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.9d"[0m, [33m1[0m);
+[1m[31m
+  488.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000010], return: 10
+        Got:      [[1m[31m-1.1[0m0[1m[31md[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 488[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10d"[0m, [33m10[0m);
+[1m[31m
+  489.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10], return: 3
+        Got:      [-1[1m[31m.[0m0[1m[31md[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 489[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.0d"[0m, -[33m10[0m);
+[1m[31m
+  490.KO (Wrong output) (Wrong return)
+[0m        Expected: [005000], return: 6
+        Got:      [[1m[31m-1.6d[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 490[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.6d"[0m, [33m5000[0m);
+[1m[31m
+  491.KO (Wrong output)
+[0m        Expected: [-5000], return: 5
+        Got:      [-[1m[31m1.4d[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 491[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.4d"[0m, -[33m5000[0m);
+[1m[31m
+  492.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m1.10d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 492[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  493.KO (Wrong output) (Wrong return)
+[0m        Expected: [002147483647], return: 12
+        Got:      [[1m[31m-1.[0m1[1m[31m2d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 493[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.12d"[0m, [33m2147483647[0m);
+[1m[31m
+  494.KO (Wrong output) (Wrong return)
+[0m        Expected: [          ], return: 10
+        Got:      [[1m[31m-10.d[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 494[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.d"[0m, [33m0[0m);
+[1m[31m
+  495.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.1[0m0[1m[31md[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 495[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.10d"[0m, [33m1[0m);
+[1m[31m
+  496.KO (Wrong output) (Wrong return)
+[0m        Expected: [00010     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 496[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5d"[0m, [33m10[0m);
+[1m[31m
+  497.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10       ], return: 10
+        Got:      [-10[1m[31m.2d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 497[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.2d"[0m, -[33m10[0m);
+[1m[31m
+  498.KO (Wrong output) (Wrong return)
+[0m        Expected: [05000     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 498[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5d"[0m, [33m5000[0m);
+[1m[31m
+  499.KO (Wrong output) (Wrong return)
+[0m        Expected: [-05000    ], return: 10
+        Got:      [-[1m[31m10.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 499[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5d"[0m, -[33m5000[0m);
+[1m[31m
+  500.KO (Wrong output) (Wrong return)
+[0m        Expected: [-000002147483648], return: 16
+        Got:      [-[1m[31m1[0m0[1m[31m.15d[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 500[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.15d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  501.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 501[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5d"[0m, [33m2147483647[0m);
+[1m[31m
+  502.KO (Wrong output) (Wrong return)
+[0m        Expected: [               ], return: 15
+        Got:      [[1m[31m-15.d[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 502[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.d"[0m, [33m0[0m);
+[1m[31m
+  503.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001     ], return: 15
+        Got:      [[1m[31m-15.1[0m0[1m[31md[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 503[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.10d"[0m, [33m1[0m);
+[1m[31m
+  504.KO (Wrong output) (Wrong return)
+[0m        Expected: [00010          ], return: 15
+        Got:      [[1m[31m-15.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 504[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5d"[0m, [33m10[0m);
+[1m[31m
+  505.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10            ], return: 15
+        Got:      [-1[1m[31m5.2d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 505[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.2d"[0m, -[33m10[0m);
+[1m[31m
+  506.KO (Wrong output) (Wrong return)
+[0m        Expected: [05000          ], return: 15
+        Got:      [[1m[31m-15.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 506[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5d"[0m, [33m5000[0m);
+[1m[31m
+  507.KO (Wrong output) (Wrong return)
+[0m        Expected: [-05000         ], return: 15
+        Got:      [-[1m[31m1[0m5[1m[31m.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 507[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5d"[0m, -[33m5000[0m);
+[1m[31m
+  508.KO (Wrong output) (Wrong return)
+[0m        Expected: [-000002147483648], return: 16
+        Got:      [-[1m[31m15.15d[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 508[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.15d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  509.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647     ], return: 15
+        Got:      [[1m[31m-[0m1[1m[31m5.5d[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 509[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5d"[0m, [33m2147483647[0m);
+[1m[31m
+  510.KO (Wrong output) (Wrong return)
+[0m        Expected: [000034   56         -d5007], return: 26
+        Got:      [[1m[31m-4.5d3[0m   [1m[31m4-10d-d5-.3d[0m], return: 21
+     [0m[1mYou can rerun this test with [0m[33msh test 510[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5d%d%4d%-10d-d5%-.3d"[0m, [33m3[0m, [33m4[0m, [33m5[0m, [33m6[0m, [33m7[0m);
+[1m[31m
+  511.KO (Wrong output) (Wrong return)
+[0m        Expected: [300000400000500000600000    -d5700000], return: 37
+        Got:      [[1m[31m-4.5d30[0m0000[1m[31m40[0m0000[1m[31m-1[0m0[1m[31md-d5-.3d[0m], return: 28
+     [0m[1mYou can rerun this test with [0m[33msh test 511[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5d%d%4d%-10d-d5%-.3d"[0m, [33m300000[0m, [33m400000[0m, [33m500000[0m, [33m600000[0m, [33m700000[0m);
+[1m[31m
+  512.KO (Wrong output) (Wrong return)
+[0m        Expected: [-300000-400000-500000-600000   -d5-700000], return: 41
+        Got:      [-[1m[31m4.5d-300[0m000[1m[31m-400[0m000[1m[31m-10d-d5-.3d[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 512[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5d%d%4d%-10d-d5%-.3d"[0m, -[33m300000[0m, -[33m400000[0m, -[33m500000[0m, -[33m600000[0m, -[33m700000[0m);
+[1m[31m
+  513.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647214148364721414836472141483647-d52141483647], return: 53
+        Got:      [[1m[31m-4.5d21474836472141483647-10d-d5-.3d[0m], return: 36
+     [0m[1mYou can rerun this test with [0m[33msh test 513[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5d%d%4d%-10d-d5%-.3d"[0m, [33m2147483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m);
+[1m[31m
+  514.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648-2141483648-2141483648-2141483648-d5-2141483648], return: 58
+        Got:      [-[1m[31m4.5d-21474836[0m4[1m[31m8-21414836[0m4[1m[31m8-10d-d5-.3d[0m], return: 38
+     [0m[1mYou can rerun this test with [0m[33msh test 514[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5d%d%4d%-10d-d5%-.3d"[0m, (int)-[33m2147483648[0m, (int)-[33m2141483648[0m, (int)-[33m2141483648[0m, (int)-[33m2141483648[0m, (int)-[33m2141483648[0m);
+[1m
+%i, widths, precisions and -: [0m
+  [1m[31m
+  515.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-i[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 515[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, [33m0[0m);
+[1m[31m
+  516.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-i[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 516[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, [33m1[0m);
+[1m[31m
+  517.KO (Wrong output)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-i[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 517[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, [33m10[0m);
+[1m[31m
+  518.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10], return: 3
+        Got:      [-[1m[31mi[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 518[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, -[33m10[0m);
+[1m[31m
+  519.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-i[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 519[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, [33m5000[0m);
+[1m[31m
+  520.KO (Wrong output) (Wrong return)
+[0m        Expected: [-5000], return: 5
+        Got:      [-[1m[31mi[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 520[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, -[33m5000[0m);
+[1m[31m
+  521.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31mi[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 521[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  522.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-i[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 522[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-i"[0m, [33m2147483647[0m);
+[1m[31m
+  523.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-[0m1[1m[31mi[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 523[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, [33m0[0m);
+[1m[31m
+  524.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-[0m1[1m[31mi[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 524[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, [33m1[0m);
+[1m[31m
+  525.KO (Wrong output) (Wrong return)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-1i[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 525[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, [33m10[0m);
+[1m[31m
+  526.KO (Wrong output)
+[0m        Expected: [-10], return: 3
+        Got:      [-1[1m[31mi[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 526[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, -[33m10[0m);
+[1m[31m
+  527.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-1i[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 527[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, [33m5000[0m);
+[1m[31m
+  528.KO (Wrong output) (Wrong return)
+[0m        Expected: [-5000], return: 5
+        Got:      [-[1m[31m1i[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 528[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, -[33m5000[0m);
+[1m[31m
+  529.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m1i[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 529[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  530.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31mi[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 530[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1i"[0m, [33m2147483647[0m);
+[1m[31m
+  531.KO (Wrong output) (Wrong return)
+[0m        Expected: [0         ], return: 10
+        Got:      [[1m[31m-10i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 531[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, [33m0[0m);
+[1m[31m
+  532.KO (Wrong output) (Wrong return)
+[0m        Expected: [1         ], return: 10
+        Got:      [[1m[31m-10i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 532[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, [33m1[0m);
+[1m[31m
+  533.KO (Wrong output) (Wrong return)
+[0m        Expected: [10        ], return: 10
+        Got:      [[1m[31m-10i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 533[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, [33m10[0m);
+[1m[31m
+  534.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10       ], return: 10
+        Got:      [-10[1m[31mi[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 534[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, -[33m10[0m);
+[1m[31m
+  535.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000      ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31mi[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 535[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, [33m5000[0m);
+[1m[31m
+  536.KO (Wrong output) (Wrong return)
+[0m        Expected: [-5000     ], return: 10
+        Got:      [-[1m[31m1[0m0[1m[31mi[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 536[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, -[33m5000[0m);
+[1m[31m
+  537.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m10i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 537[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  538.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 538[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10i"[0m, [33m2147483647[0m);
+[1m[31m
+  539.KO (Wrong output) (Wrong return)
+[0m        Expected: [], return: 0
+        Got:      [[1m[31m-.i[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 539[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.i"[0m, [33m0[0m);
+[1m[31m
+  540.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-.1i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 540[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.1i"[0m, [33m1[0m);
+[1m[31m
+  541.KO (Wrong output) (Wrong return)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-.2i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 541[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.2i"[0m, [33m10[0m);
+[1m[31m
+  542.KO (Wrong output)
+[0m        Expected: [-010], return: 4
+        Got:      [-[1m[31m.3i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 542[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.3i"[0m, -[33m10[0m);
+[1m[31m
+  543.KO (Wrong output)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-.4i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 543[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.4i"[0m, [33m5000[0m);
+[1m[31m
+  544.KO (Wrong output) (Wrong return)
+[0m        Expected: [-05000], return: 6
+        Got:      [-[1m[31m.[0m5[1m[31mi[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 544[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.5i"[0m, -[33m5000[0m);
+[1m[31m
+  545.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m.6i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 545[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.6i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  546.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-.7i[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 546[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.7i"[0m, [33m2147483647[0m);
+[1m[31m
+  547.KO (Wrong output) (Wrong return)
+[0m        Expected: [00000000], return: 8
+        Got:      [[1m[31m-1.8i[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 547[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.8i"[0m, [33m0[0m);
+[1m[31m
+  548.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000001], return: 9
+        Got:      [[1m[31m-1.9i[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 548[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.9i"[0m, [33m1[0m);
+[1m[31m
+  549.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000010], return: 10
+        Got:      [[1m[31m-1.1[0m0[1m[31mi[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 549[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10i"[0m, [33m10[0m);
+[1m[31m
+  550.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10], return: 3
+        Got:      [-1[1m[31m.[0m0[1m[31mi[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 550[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.0i"[0m, -[33m10[0m);
+[1m[31m
+  551.KO (Wrong output) (Wrong return)
+[0m        Expected: [005000], return: 6
+        Got:      [[1m[31m-1.6i[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 551[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.6i"[0m, [33m5000[0m);
+[1m[31m
+  552.KO (Wrong output)
+[0m        Expected: [-5000], return: 5
+        Got:      [-[1m[31m1.4i[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 552[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.4i"[0m, -[33m5000[0m);
+[1m[31m
+  553.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648], return: 11
+        Got:      [-[1m[31m1.10i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 553[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  554.KO (Wrong output) (Wrong return)
+[0m        Expected: [002147483647], return: 12
+        Got:      [[1m[31m-1.[0m1[1m[31m2i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 554[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.12i"[0m, [33m2147483647[0m);
+[1m[31m
+  555.KO (Wrong output) (Wrong return)
+[0m        Expected: [          ], return: 10
+        Got:      [[1m[31m-10.i[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 555[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.i"[0m, [33m0[0m);
+[1m[31m
+  556.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.1[0m0[1m[31mi[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 556[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.10i"[0m, [33m1[0m);
+[1m[31m
+  557.KO (Wrong output) (Wrong return)
+[0m        Expected: [00010     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 557[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5i"[0m, [33m10[0m);
+[1m[31m
+  558.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10       ], return: 10
+        Got:      [-10[1m[31m.2i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 558[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.2i"[0m, -[33m10[0m);
+[1m[31m
+  559.KO (Wrong output) (Wrong return)
+[0m        Expected: [05000     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 559[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5i"[0m, [33m5000[0m);
+[1m[31m
+  560.KO (Wrong output) (Wrong return)
+[0m        Expected: [-05000    ], return: 10
+        Got:      [-[1m[31m10.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 560[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5i"[0m, -[33m5000[0m);
+[1m[31m
+  561.KO (Wrong output) (Wrong return)
+[0m        Expected: [-000002147483648], return: 16
+        Got:      [-[1m[31m1[0m0[1m[31m.15i[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 561[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.15i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  562.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 562[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5i"[0m, [33m2147483647[0m);
+[1m[31m
+  563.KO (Wrong output) (Wrong return)
+[0m        Expected: [               ], return: 15
+        Got:      [[1m[31m-15.i[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 563[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.i"[0m, [33m0[0m);
+[1m[31m
+  564.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001     ], return: 15
+        Got:      [[1m[31m-15.1[0m0[1m[31mi[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 564[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.10i"[0m, [33m1[0m);
+[1m[31m
+  565.KO (Wrong output) (Wrong return)
+[0m        Expected: [00010          ], return: 15
+        Got:      [[1m[31m-15.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 565[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5i"[0m, [33m10[0m);
+[1m[31m
+  566.KO (Wrong output) (Wrong return)
+[0m        Expected: [-10            ], return: 15
+        Got:      [-1[1m[31m5.2i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 566[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.2i"[0m, -[33m10[0m);
+[1m[31m
+  567.KO (Wrong output) (Wrong return)
+[0m        Expected: [05000          ], return: 15
+        Got:      [[1m[31m-15.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 567[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5i"[0m, [33m5000[0m);
+[1m[31m
+  568.KO (Wrong output) (Wrong return)
+[0m        Expected: [-05000         ], return: 15
+        Got:      [-[1m[31m1[0m5[1m[31m.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 568[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5i"[0m, -[33m5000[0m);
+[1m[31m
+  569.KO (Wrong output) (Wrong return)
+[0m        Expected: [-000002147483648], return: 16
+        Got:      [-[1m[31m15.15i[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 569[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.15i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  570.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647     ], return: 15
+        Got:      [[1m[31m-[0m1[1m[31m5.5i[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 570[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5i"[0m, [33m2147483647[0m);
+[1m[31m
+  571.KO (Wrong output) (Wrong return)
+[0m        Expected: [000034   56         -i5007], return: 26
+        Got:      [[1m[31m-4.5i3[0m   [1m[31m4-10i-i5-.3i[0m], return: 21
+     [0m[1mYou can rerun this test with [0m[33msh test 571[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5i%i%4i%-10i-i5%-.3i"[0m, [33m3[0m, [33m4[0m, [33m5[0m, [33m6[0m, [33m7[0m);
+[1m[31m
+  572.KO (Wrong output) (Wrong return)
+[0m        Expected: [300000400000500000600000    -i5700000], return: 37
+        Got:      [[1m[31m-4.5i30[0m0000[1m[31m40[0m0000[1m[31m-1[0m0[1m[31mi-i5-.3i[0m], return: 28
+     [0m[1mYou can rerun this test with [0m[33msh test 572[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5i%i%4i%-10i-i5%-.3i"[0m, [33m300000[0m, [33m400000[0m, [33m500000[0m, [33m600000[0m, [33m700000[0m);
+[1m[31m
+  573.KO (Wrong output) (Wrong return)
+[0m        Expected: [-300000-400000-500000-600000   -i5-700000], return: 41
+        Got:      [-[1m[31m4.5i-300[0m000[1m[31m-400[0m000[1m[31m-10i-i5-.3i[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 573[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5i%i%4i%-10i-i5%-.3i"[0m, -[33m300000[0m, -[33m400000[0m, -[33m500000[0m, -[33m600000[0m, -[33m700000[0m);
+[1m[31m
+  574.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647214148364721414836472141483647-i52141483647], return: 53
+        Got:      [[1m[31m-4.5i21474836472141483647-10i-i5-.3i[0m], return: 36
+     [0m[1mYou can rerun this test with [0m[33msh test 574[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5i%i%4i%-10i-i5%-.3i"[0m, [33m2147483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m);
+[1m[31m
+  575.KO (Wrong output) (Wrong return)
+[0m        Expected: [-2147483648-2141483648-2141483648-2141483648-i5-2141483648], return: 58
+        Got:      [-[1m[31m4.5i-21474836[0m4[1m[31m8-21414836[0m4[1m[31m8-10i-i5-.3i[0m], return: 38
+     [0m[1mYou can rerun this test with [0m[33msh test 575[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5i%i%4i%-10i-i5%-.3i"[0m, (int)-[33m2147483648[0m, (int)-[33m2141483648[0m, (int)-[33m2141483648[0m, (int)-[33m2141483648[0m, (int)-[33m2141483648[0m);
+[1m
+%u, widths, precisions and -: [0m
+  [1m[31m
+  576.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 576[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, [33m0[0m);
+[1m[31m
+  577.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 577[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, [33m1[0m);
+[1m[31m
+  578.KO (Wrong output)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 578[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, [33m10[0m);
+[1m[31m
+  579.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286], return: 10
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 579[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, -[33m10[0m);
+[1m[31m
+  580.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 580[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, [33m5000[0m);
+[1m[31m
+  581.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296], return: 10
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 581[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, -[33m5000[0m);
+[1m[31m
+  582.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967295], return: 10
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 582[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, (unsigned int)-[33m1[0m);
+[1m[31m
+  583.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-u[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 583[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-u"[0m, [33m2147483647[0m);
+[1m[31m
+  584.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-[0m1[1m[31mu[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 584[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, [33m0[0m);
+[1m[31m
+  585.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-[0m1[1m[31mu[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 585[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, [33m1[0m);
+[1m[31m
+  586.KO (Wrong output) (Wrong return)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-1u[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 586[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, [33m10[0m);
+[1m[31m
+  587.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286], return: 10
+        Got:      [[1m[31m-1u[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 587[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, -[33m10[0m);
+[1m[31m
+  588.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-1u[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 588[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, [33m5000[0m);
+[1m[31m
+  589.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296], return: 10
+        Got:      [[1m[31m-1u[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 589[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, -[33m5000[0m);
+[1m[31m
+  590.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967295], return: 10
+        Got:      [[1m[31m-1u[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 590[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, (unsigned int)-[33m1[0m);
+[1m[31m
+  591.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31mu[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 591[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1u"[0m, [33m2147483647[0m);
+[1m[31m
+  592.KO (Wrong output) (Wrong return)
+[0m        Expected: [0         ], return: 10
+        Got:      [[1m[31m-10u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 592[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, [33m0[0m);
+[1m[31m
+  593.KO (Wrong output) (Wrong return)
+[0m        Expected: [1         ], return: 10
+        Got:      [[1m[31m-10u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 593[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, [33m1[0m);
+[1m[31m
+  594.KO (Wrong output) (Wrong return)
+[0m        Expected: [10        ], return: 10
+        Got:      [[1m[31m-10u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 594[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, [33m10[0m);
+[1m[31m
+  595.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286], return: 10
+        Got:      [[1m[31m-10u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 595[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, -[33m10[0m);
+[1m[31m
+  596.KO (Wrong output) (Wrong return)
+[0m        Expected: [5000      ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31mu[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 596[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, [33m5000[0m);
+[1m[31m
+  597.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296], return: 10
+        Got:      [[1m[31m-10u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 597[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, -[33m5000[0m);
+[1m[31m
+  598.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967295], return: 10
+        Got:      [[1m[31m-10u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 598[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, -[33m1[0m);
+[1m[31m
+  599.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 599[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10u"[0m, [33m2147483647[0m);
+[1m[31m
+  600.KO (Wrong output) (Wrong return)
+[0m        Expected: [], return: 0
+        Got:      [[1m[31m-.u[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 600[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.u"[0m, [33m0[0m);
+[1m[31m
+  601.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-.1u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 601[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.1u"[0m, [33m1[0m);
+[1m[31m
+  602.KO (Wrong output) (Wrong return)
+[0m        Expected: [10], return: 2
+        Got:      [[1m[31m-.2u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 602[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.2u"[0m, [33m10[0m);
+[1m[31m
+  603.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286], return: 10
+        Got:      [[1m[31m-.3u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 603[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.3u"[0m, -[33m10[0m);
+[1m[31m
+  604.KO (Wrong output)
+[0m        Expected: [5000], return: 4
+        Got:      [[1m[31m-.4u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 604[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.4u"[0m, [33m5000[0m);
+[1m[31m
+  605.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296], return: 10
+        Got:      [[1m[31m-.5u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 605[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.5u"[0m, -[33m5000[0m);
+[1m[31m
+  606.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967295], return: 10
+        Got:      [[1m[31m-.6u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 606[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.6u"[0m, -[33m1[0m);
+[1m[31m
+  607.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-.7u[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 607[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.7u"[0m, [33m2147483647[0m);
+[1m[31m
+  608.KO (Wrong output) (Wrong return)
+[0m        Expected: [00000000], return: 8
+        Got:      [[1m[31m-1.8u[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 608[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.8u"[0m, [33m0[0m);
+[1m[31m
+  609.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000001], return: 9
+        Got:      [[1m[31m-1.9u[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 609[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.9u"[0m, [33m1[0m);
+[1m[31m
+  610.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000010], return: 10
+        Got:      [[1m[31m-1.1[0m0[1m[31mu[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 610[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10u"[0m, [33m10[0m);
+[1m[31m
+  611.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286], return: 10
+        Got:      [[1m[31m-1.0u[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 611[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.0u"[0m, -[33m10[0m);
+[1m[31m
+  612.KO (Wrong output) (Wrong return)
+[0m        Expected: [005000], return: 6
+        Got:      [[1m[31m-1.6u[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 612[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.6u"[0m, [33m5000[0m);
+[1m[31m
+  613.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296], return: 10
+        Got:      [[1m[31m-1.[0m4[1m[31mu[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 613[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.4u"[0m, -[33m5000[0m);
+[1m[31m
+  614.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967295], return: 10
+        Got:      [[1m[31m-1.10u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 614[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10u"[0m, -[33m1[0m);
+[1m[31m
+  615.KO (Wrong output) (Wrong return)
+[0m        Expected: [002147483647], return: 12
+        Got:      [[1m[31m-1.[0m1[1m[31m2u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 615[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.12u"[0m, [33m2147483647[0m);
+[1m[31m
+  616.KO (Wrong output) (Wrong return)
+[0m        Expected: [          ], return: 10
+        Got:      [[1m[31m-10.u[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 616[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.u"[0m, [33m0[0m);
+[1m[31m
+  617.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.1[0m0[1m[31mu[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 617[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.10u"[0m, [33m1[0m);
+[1m[31m
+  618.KO (Wrong output) (Wrong return)
+[0m        Expected: [00010     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 618[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5u"[0m, [33m10[0m);
+[1m[31m
+  619.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286], return: 10
+        Got:      [[1m[31m-10.2u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 619[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.2u"[0m, -[33m10[0m);
+[1m[31m
+  620.KO (Wrong output) (Wrong return)
+[0m        Expected: [05000     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 620[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5u"[0m, [33m5000[0m);
+[1m[31m
+  621.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296], return: 10
+        Got:      [[1m[31m-10.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 621[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5u"[0m, -[33m5000[0m);
+[1m[31m
+  622.KO (Wrong output) (Wrong return)
+[0m        Expected: [000004294967295], return: 15
+        Got:      [[1m[31m-1[0m0[1m[31m.15u[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 622[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.15u"[0m, -[33m1[0m);
+[1m[31m
+  623.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 623[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5u"[0m, [33m2147483647[0m);
+[1m[31m
+  624.KO (Wrong output) (Wrong return)
+[0m        Expected: [               ], return: 15
+        Got:      [[1m[31m-15.u[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 624[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.u"[0m, [33m0[0m);
+[1m[31m
+  625.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001     ], return: 15
+        Got:      [[1m[31m-15.1[0m0[1m[31mu[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 625[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.10u"[0m, [33m1[0m);
+[1m[31m
+  626.KO (Wrong output) (Wrong return)
+[0m        Expected: [00010          ], return: 15
+        Got:      [[1m[31m-15.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 626[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5u"[0m, [33m10[0m);
+[1m[31m
+  627.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967286     ], return: 15
+        Got:      [[1m[31m-15.2u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 627[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.2u"[0m, -[33m10[0m);
+[1m[31m
+  628.KO (Wrong output) (Wrong return)
+[0m        Expected: [05000          ], return: 15
+        Got:      [[1m[31m-15.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 628[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5u"[0m, [33m5000[0m);
+[1m[31m
+  629.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294962296     ], return: 15
+        Got:      [[1m[31m-15.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 629[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5u"[0m, -[33m5000[0m);
+[1m[31m
+  630.KO (Wrong output) (Wrong return)
+[0m        Expected: [000004294967295], return: 15
+        Got:      [[1m[31m-15.15u[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 630[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.15u"[0m, -[33m1[0m);
+[1m[31m
+  631.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647     ], return: 15
+        Got:      [[1m[31m-[0m1[1m[31m5.5u[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 631[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5u"[0m, [33m2147483647[0m);
+[1m[31m
+  632.KO (Wrong output) (Wrong return)
+[0m        Expected: [000034   56         -u5007], return: 26
+        Got:      [[1m[31m-4.5u3[0m   [1m[31m4-10u-u5-.3u[0m], return: 21
+     [0m[1mYou can rerun this test with [0m[33msh test 632[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5u%u%4u%-10u-u5%-.3u"[0m, [33m3[0m, [33m4[0m, [33m5[0m, [33m6[0m, [33m7[0m);
+[1m[31m
+  633.KO (Wrong output) (Wrong return)
+[0m        Expected: [300000400000500000600000    -u5700000], return: 37
+        Got:      [[1m[31m-4.5u30[0m0000[1m[31m40[0m0000[1m[31m-1[0m0[1m[31mu-u5-.3u[0m], return: 28
+     [0m[1mYou can rerun this test with [0m[33msh test 633[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5u%u%4u%-10u-u5%-.3u"[0m, [33m300000[0m, [33m400000[0m, [33m500000[0m, [33m600000[0m, [33m700000[0m);
+[1m[31m
+  634.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294667296429456729642944672964294367296-u54294267296], return: 53
+        Got:      [[1m[31m-4.5u4294[0m6[1m[31m672964294567296-10u-u5-.[0m3[1m[31mu[0m], return: 36
+     [0m[1mYou can rerun this test with [0m[33msh test 634[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5u%u%4u%-10u-u5%-.3u"[0m, -[33m300000[0m, -[33m400000[0m, -[33m500000[0m, -[33m600000[0m, -[33m700000[0m);
+[1m[31m
+  635.KO (Wrong output) (Wrong return)
+[0m        Expected: [2147483647214148364721414836472141483647-u52141483647], return: 53
+        Got:      [[1m[31m-4.5u21474836472141483647-10u-u5-.3u[0m], return: 36
+     [0m[1mYou can rerun this test with [0m[33msh test 635[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5u%u%4u%-10u-u5%-.3u"[0m, [33m2147483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m);
+[1m[31m
+  636.KO (Wrong output) (Wrong return)
+[0m        Expected: [4294967295429496729542949672954294967295-u54294967295], return: 53
+        Got:      [[1m[31m-4.5u42949672954294967295-10u-u5-.3u[0m], return: 36
+     [0m[1mYou can rerun this test with [0m[33msh test 636[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5u%u%4u%-10u-u5%-.3u"[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m);
+[1m
+%x, widths, precisions and -: [0m
+  [1m[31m
+  637.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 637[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, [33m0[0m);
+[1m[31m
+  638.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 638[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, [33m1[0m);
+[1m[31m
+  639.KO (Wrong output) (Wrong return)
+[0m        Expected: [a], return: 1
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 639[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, [33m10[0m);
+[1m[31m
+  640.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6], return: 8
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 640[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, -[33m10[0m);
+[1m[31m
+  641.KO (Wrong output) (Wrong return)
+[0m        Expected: [1388], return: 4
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 641[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, [33m5000[0m);
+[1m[31m
+  642.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78], return: 8
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 642[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, -[33m5000[0m);
+[1m[31m
+  643.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffffff], return: 8
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 643[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, -[33m1[0m);
+[1m[31m
+  644.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff], return: 8
+        Got:      [[1m[31m-x[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 644[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-x"[0m, [33m2147483647[0m);
+[1m[31m
+  645.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 645[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, [33m0[0m);
+[1m[31m
+  646.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 646[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, [33m1[0m);
+[1m[31m
+  647.KO (Wrong output) (Wrong return)
+[0m        Expected: [a], return: 1
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 647[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, [33m10[0m);
+[1m[31m
+  648.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6], return: 8
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 648[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, -[33m10[0m);
+[1m[31m
+  649.KO (Wrong output) (Wrong return)
+[0m        Expected: [1388], return: 4
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 649[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, [33m5000[0m);
+[1m[31m
+  650.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78], return: 8
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 650[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, -[33m5000[0m);
+[1m[31m
+  651.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffffff], return: 8
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 651[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, -[33m1[0m);
+[1m[31m
+  652.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff], return: 8
+        Got:      [[1m[31m-1x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 652[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1x"[0m, [33m2147483647[0m);
+[1m[31m
+  653.KO (Wrong output) (Wrong return)
+[0m        Expected: [0         ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 653[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, [33m0[0m);
+[1m[31m
+  654.KO (Wrong output) (Wrong return)
+[0m        Expected: [1         ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 654[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, [33m1[0m);
+[1m[31m
+  655.KO (Wrong output) (Wrong return)
+[0m        Expected: [a         ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 655[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, [33m10[0m);
+[1m[31m
+  656.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6  ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 656[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, -[33m10[0m);
+[1m[31m
+  657.KO (Wrong output) (Wrong return)
+[0m        Expected: [1388      ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 657[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, [33m5000[0m);
+[1m[31m
+  658.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78  ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 658[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, -[33m5000[0m);
+[1m[31m
+  659.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffffff  ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 659[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, -[33m1[0m);
+[1m[31m
+  660.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff  ], return: 10
+        Got:      [[1m[31m-10x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 660[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10x"[0m, [33m2147483647[0m);
+[1m[31m
+  661.KO (Wrong output) (Wrong return)
+[0m        Expected: [], return: 0
+        Got:      [[1m[31m-.x[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 661[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.x"[0m, [33m0[0m);
+[1m[31m
+  662.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-.1x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 662[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.1x"[0m, [33m1[0m);
+[1m[31m
+  663.KO (Wrong output) (Wrong return)
+[0m        Expected: [0a], return: 2
+        Got:      [[1m[31m-.2x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 663[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.2x"[0m, [33m10[0m);
+[1m[31m
+  664.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6], return: 8
+        Got:      [[1m[31m-.3x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 664[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.3x"[0m, -[33m10[0m);
+[1m[31m
+  665.KO (Wrong output)
+[0m        Expected: [1388], return: 4
+        Got:      [[1m[31m-.4x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 665[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.4x"[0m, [33m5000[0m);
+[1m[31m
+  666.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78], return: 8
+        Got:      [[1m[31m-.5x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 666[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.5x"[0m, -[33m5000[0m);
+[1m[31m
+  667.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffffff], return: 8
+        Got:      [[1m[31m-.6x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 667[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.6x"[0m, -[33m1[0m);
+[1m[31m
+  668.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff], return: 8
+        Got:      [[1m[31m-.7x[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 668[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.7x"[0m, [33m2147483647[0m);
+[1m[31m
+  669.KO (Wrong output) (Wrong return)
+[0m        Expected: [00000000], return: 8
+        Got:      [[1m[31m-1.8x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 669[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.8x"[0m, [33m0[0m);
+[1m[31m
+  670.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000001], return: 9
+        Got:      [[1m[31m-1.9x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 670[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.9x"[0m, [33m1[0m);
+[1m[31m
+  671.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000000a], return: 10
+        Got:      [[1m[31m-1.1[0m0[1m[31mx[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 671[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10x"[0m, [33m10[0m);
+[1m[31m
+  672.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6], return: 8
+        Got:      [[1m[31m-1.0x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 672[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.0x"[0m, -[33m10[0m);
+[1m[31m
+  673.KO (Wrong output) (Wrong return)
+[0m        Expected: [001388], return: 6
+        Got:      [[1m[31m-1.6x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 673[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.6x"[0m, [33m5000[0m);
+[1m[31m
+  674.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78], return: 8
+        Got:      [[1m[31m-1.4x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 674[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.4x"[0m, -[33m5000[0m);
+[1m[31m
+  675.KO (Wrong output) (Wrong return)
+[0m        Expected: [00ffffffff], return: 10
+        Got:      [[1m[31m-1.10x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 675[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10x"[0m, -[33m1[0m);
+[1m[31m
+  676.KO (Wrong output) (Wrong return)
+[0m        Expected: [00007fffffff], return: 12
+        Got:      [[1m[31m-1.12x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 676[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.12x"[0m, [33m2147483647[0m);
+[1m[31m
+  677.KO (Wrong output) (Wrong return)
+[0m        Expected: [          ], return: 10
+        Got:      [[1m[31m-10.x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 677[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.x"[0m, [33m0[0m);
+[1m[31m
+  678.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.1[0m0[1m[31mx[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 678[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.10x"[0m, [33m1[0m);
+[1m[31m
+  679.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000a     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 679[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5x"[0m, [33m10[0m);
+[1m[31m
+  680.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6  ], return: 10
+        Got:      [[1m[31m-10.2x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 680[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.2x"[0m, -[33m10[0m);
+[1m[31m
+  681.KO (Wrong output) (Wrong return)
+[0m        Expected: [01388     ], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 681[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5x"[0m, [33m5000[0m);
+[1m[31m
+  682.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78  ], return: 10
+        Got:      [[1m[31m-10.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 682[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5x"[0m, -[33m5000[0m);
+[1m[31m
+  683.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000ffffffff], return: 15
+        Got:      [[1m[31m-1[0m0[1m[31m.15x[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 683[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.15x"[0m, -[33m1[0m);
+[1m[31m
+  684.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff  ], return: 10
+        Got:      [[1m[31m-10.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 684[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5x"[0m, [33m2147483647[0m);
+[1m[31m
+  685.KO (Wrong output) (Wrong return)
+[0m        Expected: [               ], return: 15
+        Got:      [[1m[31m-15.x[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 685[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.x"[0m, [33m0[0m);
+[1m[31m
+  686.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001     ], return: 15
+        Got:      [[1m[31m-15.1[0m0[1m[31mx[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 686[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.10x"[0m, [33m1[0m);
+[1m[31m
+  687.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000a          ], return: 15
+        Got:      [[1m[31m-15.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 687[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5x"[0m, [33m10[0m);
+[1m[31m
+  688.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffffff6       ], return: 15
+        Got:      [[1m[31m-15.2x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 688[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.2x"[0m, -[33m10[0m);
+[1m[31m
+  689.KO (Wrong output) (Wrong return)
+[0m        Expected: [01388          ], return: 15
+        Got:      [[1m[31m-[0m1[1m[31m5.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 689[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5x"[0m, [33m5000[0m);
+[1m[31m
+  690.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffec78       ], return: 15
+        Got:      [[1m[31m-15.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 690[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5x"[0m, -[33m5000[0m);
+[1m[31m
+  691.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000ffffffff], return: 15
+        Got:      [[1m[31m-15.15x[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 691[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.15x"[0m, -[33m1[0m);
+[1m[31m
+  692.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff       ], return: 15
+        Got:      [[1m[31m-15.5x[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 692[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5x"[0m, [33m2147483647[0m);
+[1m[31m
+  693.KO (Wrong output) (Wrong return)
+[0m        Expected: [000034   56         -x5007], return: 26
+        Got:      [[1m[31m-4.5x3[0m   [1m[31m4-10x-x5-.3x[0m], return: 21
+     [0m[1mYou can rerun this test with [0m[33msh test 693[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5x%x%4x%-10x-x5%-.3x"[0m, [33m3[0m, [33m4[0m, [33m5[0m, [33m6[0m, [33m7[0m);
+[1m[31m
+  694.KO (Wrong output) (Wrong return)
+[0m        Expected: [493e061a807a120927c0     -x5aae60], return: 33
+        Got:      [[1m[31m-4.5x493e[0m0[1m[31m61a8[0m0[1m[31m-10x-x5-.3x[0m], return: 26
+     [0m[1mYou can rerun this test with [0m[33msh test 694[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5x%x%4x%-10x-x5%-.3x"[0m, [33m300000[0m, [33m400000[0m, [33m500000[0m, [33m600000[0m, [33m700000[0m);
+[1m[31m
+  695.KO (Wrong output) (Wrong return)
+[0m        Expected: [fffb6c20fff9e580fff85ee0fff6d840  -x5fff551a0], return: 45
+        Got:      [[1m[31m-4.5xfffb6c20fff9e5[0m8[1m[31m0-1[0m0[1m[31mx-x5-.3x[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 695[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5x%x%4x%-10x-x5%-.3x"[0m, -[33m300000[0m, -[33m400000[0m, -[33m500000[0m, -[33m600000[0m, -[33m700000[0m);
+[1m[31m
+  696.KO (Wrong output) (Wrong return)
+[0m        Expected: [7fffffff7fa4727f7fa4727f7fa4727f  -x57fa4727f], return: 45
+        Got:      [[1m[31m-4.5x7[0mff[1m[31mf[0mf[1m[31mfff7fa4727f-10x-x5-.3x[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 696[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5x%x%4x%-10x-x5%-.3x"[0m, [33m2147483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m);
+[1m[31m
+  697.KO (Wrong output) (Wrong return)
+[0m        Expected: [ffffffffffffffffffffffffffffffff  -x5ffffffff], return: 45
+        Got:      [[1m[31m-4.5x[0mffffffffffffffff[1m[31m-10x-x5-.3x[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 697[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5x%x%4x%-10x-x5%-.3x"[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m);
+[1m
+%X, widths, precisions and -: [0m
+  [1m[31m
+  698.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 698[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, [33m0[0m);
+[1m[31m
+  699.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 699[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, [33m1[0m);
+[1m[31m
+  700.KO (Wrong output) (Wrong return)
+[0m        Expected: [A], return: 1
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 700[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, [33m10[0m);
+[1m[31m
+  701.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6], return: 8
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 701[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, -[33m10[0m);
+[1m[31m
+  702.KO (Wrong output) (Wrong return)
+[0m        Expected: [1388], return: 4
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 702[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, [33m5000[0m);
+[1m[31m
+  703.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78], return: 8
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 703[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, -[33m5000[0m);
+[1m[31m
+  704.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFFF], return: 8
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 704[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, -[33m1[0m);
+[1m[31m
+  705.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF], return: 8
+        Got:      [[1m[31m-X[0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 705[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-X"[0m, [33m2147483647[0m);
+[1m[31m
+  706.KO (Wrong output) (Wrong return)
+[0m        Expected: [0], return: 1
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 706[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, [33m0[0m);
+[1m[31m
+  707.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 707[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, [33m1[0m);
+[1m[31m
+  708.KO (Wrong output) (Wrong return)
+[0m        Expected: [A], return: 1
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 708[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, [33m10[0m);
+[1m[31m
+  709.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6], return: 8
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 709[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, -[33m10[0m);
+[1m[31m
+  710.KO (Wrong output) (Wrong return)
+[0m        Expected: [1388], return: 4
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 710[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, [33m5000[0m);
+[1m[31m
+  711.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78], return: 8
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 711[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, -[33m5000[0m);
+[1m[31m
+  712.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFFF], return: 8
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 712[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, -[33m1[0m);
+[1m[31m
+  713.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF], return: 8
+        Got:      [[1m[31m-1X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 713[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1X"[0m, [33m2147483647[0m);
+[1m[31m
+  714.KO (Wrong output) (Wrong return)
+[0m        Expected: [0         ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 714[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, [33m0[0m);
+[1m[31m
+  715.KO (Wrong output) (Wrong return)
+[0m        Expected: [1         ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 715[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, [33m1[0m);
+[1m[31m
+  716.KO (Wrong output) (Wrong return)
+[0m        Expected: [A         ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 716[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, [33m10[0m);
+[1m[31m
+  717.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6  ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 717[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, -[33m10[0m);
+[1m[31m
+  718.KO (Wrong output) (Wrong return)
+[0m        Expected: [1388      ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 718[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, [33m5000[0m);
+[1m[31m
+  719.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78  ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 719[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, -[33m5000[0m);
+[1m[31m
+  720.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFFF  ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 720[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, -[33m1[0m);
+[1m[31m
+  721.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF  ], return: 10
+        Got:      [[1m[31m-10X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 721[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10X"[0m, [33m2147483647[0m);
+[1m[31m
+  722.KO (Wrong output) (Wrong return)
+[0m        Expected: [], return: 0
+        Got:      [[1m[31m-.X[0m], return: 3
+     [0m[1mYou can rerun this test with [0m[33msh test 722[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.X"[0m, [33m0[0m);
+[1m[31m
+  723.KO (Wrong output) (Wrong return)
+[0m        Expected: [1], return: 1
+        Got:      [[1m[31m-.1X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 723[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.1X"[0m, [33m1[0m);
+[1m[31m
+  724.KO (Wrong output) (Wrong return)
+[0m        Expected: [0A], return: 2
+        Got:      [[1m[31m-.2X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 724[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.2X"[0m, [33m10[0m);
+[1m[31m
+  725.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6], return: 8
+        Got:      [[1m[31m-.3X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 725[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.3X"[0m, -[33m10[0m);
+[1m[31m
+  726.KO (Wrong output)
+[0m        Expected: [1388], return: 4
+        Got:      [[1m[31m-.4X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 726[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.4X"[0m, [33m5000[0m);
+[1m[31m
+  727.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78], return: 8
+        Got:      [[1m[31m-.5X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 727[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.5X"[0m, -[33m5000[0m);
+[1m[31m
+  728.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFFF], return: 8
+        Got:      [[1m[31m-.6X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 728[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.6X"[0m, -[33m1[0m);
+[1m[31m
+  729.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF], return: 8
+        Got:      [[1m[31m-.7X[0m], return: 4
+     [0m[1mYou can rerun this test with [0m[33msh test 729[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-.7X"[0m, [33m2147483647[0m);
+[1m[31m
+  730.KO (Wrong output) (Wrong return)
+[0m        Expected: [00000000], return: 8
+        Got:      [[1m[31m-1.8X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 730[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.8X"[0m, [33m0[0m);
+[1m[31m
+  731.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000001], return: 9
+        Got:      [[1m[31m-1.9X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 731[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.9X"[0m, [33m1[0m);
+[1m[31m
+  732.KO (Wrong output) (Wrong return)
+[0m        Expected: [000000000A], return: 10
+        Got:      [[1m[31m-1.1[0m0[1m[31mX[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 732[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10X"[0m, [33m10[0m);
+[1m[31m
+  733.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6], return: 8
+        Got:      [[1m[31m-1.0X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 733[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.0X"[0m, -[33m10[0m);
+[1m[31m
+  734.KO (Wrong output) (Wrong return)
+[0m        Expected: [001388], return: 6
+        Got:      [[1m[31m-1.6X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 734[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.6X"[0m, [33m5000[0m);
+[1m[31m
+  735.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78], return: 8
+        Got:      [[1m[31m-1.4X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 735[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.4X"[0m, -[33m5000[0m);
+[1m[31m
+  736.KO (Wrong output) (Wrong return)
+[0m        Expected: [00FFFFFFFF], return: 10
+        Got:      [[1m[31m-1.10X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 736[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.10X"[0m, -[33m1[0m);
+[1m[31m
+  737.KO (Wrong output) (Wrong return)
+[0m        Expected: [00007FFFFFFF], return: 12
+        Got:      [[1m[31m-1.12X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 737[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-1.12X"[0m, [33m2147483647[0m);
+[1m[31m
+  738.KO (Wrong output) (Wrong return)
+[0m        Expected: [          ], return: 10
+        Got:      [[1m[31m-10.X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 738[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.X"[0m, [33m0[0m);
+[1m[31m
+  739.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.1[0m0[1m[31mX[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 739[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.10X"[0m, [33m1[0m);
+[1m[31m
+  740.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000A     ], return: 10
+        Got:      [[1m[31m-1[0m0[1m[31m.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 740[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5X"[0m, [33m10[0m);
+[1m[31m
+  741.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6  ], return: 10
+        Got:      [[1m[31m-10.2X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 741[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.2X"[0m, -[33m10[0m);
+[1m[31m
+  742.KO (Wrong output) (Wrong return)
+[0m        Expected: [01388     ], return: 10
+        Got:      [[1m[31m-[0m1[1m[31m0.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 742[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5X"[0m, [33m5000[0m);
+[1m[31m
+  743.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78  ], return: 10
+        Got:      [[1m[31m-10.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 743[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5X"[0m, -[33m5000[0m);
+[1m[31m
+  744.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000FFFFFFFF], return: 15
+        Got:      [[1m[31m-1[0m0[1m[31m.15X[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 744[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.15X"[0m, -[33m1[0m);
+[1m[31m
+  745.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF  ], return: 10
+        Got:      [[1m[31m-10.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 745[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-10.5X"[0m, [33m2147483647[0m);
+[1m[31m
+  746.KO (Wrong output) (Wrong return)
+[0m        Expected: [               ], return: 15
+        Got:      [[1m[31m-15.X[0m], return: 5
+     [0m[1mYou can rerun this test with [0m[33msh test 746[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.X"[0m, [33m0[0m);
+[1m[31m
+  747.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000001     ], return: 15
+        Got:      [[1m[31m-15.1[0m0[1m[31mX[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 747[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.10X"[0m, [33m1[0m);
+[1m[31m
+  748.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000A          ], return: 15
+        Got:      [[1m[31m-15.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 748[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5X"[0m, [33m10[0m);
+[1m[31m
+  749.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFF6       ], return: 15
+        Got:      [[1m[31m-15.2X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 749[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.2X"[0m, -[33m10[0m);
+[1m[31m
+  750.KO (Wrong output) (Wrong return)
+[0m        Expected: [01388          ], return: 15
+        Got:      [[1m[31m-[0m1[1m[31m5.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 750[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5X"[0m, [33m5000[0m);
+[1m[31m
+  751.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFEC78       ], return: 15
+        Got:      [[1m[31m-15.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 751[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5X"[0m, -[33m5000[0m);
+[1m[31m
+  752.KO (Wrong output) (Wrong return)
+[0m        Expected: [0000000FFFFFFFF], return: 15
+        Got:      [[1m[31m-15.15X[0m], return: 7
+     [0m[1mYou can rerun this test with [0m[33msh test 752[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.15X"[0m, -[33m1[0m);
+[1m[31m
+  753.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF       ], return: 15
+        Got:      [[1m[31m-15.5X[0m], return: 6
+     [0m[1mYou can rerun this test with [0m[33msh test 753[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-15.5X"[0m, [33m2147483647[0m);
+[1m[31m
+  754.KO (Wrong output) (Wrong return)
+[0m        Expected: [000034   56         -X5007], return: 26
+        Got:      [[1m[31m-4.5X3[0m   [1m[31m4-10X-X5-.3X[0m], return: 21
+     [0m[1mYou can rerun this test with [0m[33msh test 754[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5X%X%4X%-10X-X5%-.3X"[0m, [33m3[0m, [33m4[0m, [33m5[0m, [33m6[0m, [33m7[0m);
+[1m[31m
+  755.KO (Wrong output) (Wrong return)
+[0m        Expected: [493E061A807A120927C0     -X5AAE60], return: 33
+        Got:      [[1m[31m-4.5X493E[0m0[1m[31m61A8[0m0[1m[31m-10X-X5-.3X[0m], return: 26
+     [0m[1mYou can rerun this test with [0m[33msh test 755[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5X%X%4X%-10X-X5%-.3X"[0m, [33m300000[0m, [33m400000[0m, [33m500000[0m, [33m600000[0m, [33m700000[0m);
+[1m[31m
+  756.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFB6C20FFF9E580FFF85EE0FFF6D840  -X5FFF551A0], return: 45
+        Got:      [[1m[31m-4.5XFFFB6C20FFF9E5[0m8[1m[31m0-1[0m0[1m[31mX-X5-.3X[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 756[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5X%X%4X%-10X-X5%-.3X"[0m, -[33m300000[0m, -[33m400000[0m, -[33m500000[0m, -[33m600000[0m, -[33m700000[0m);
+[1m[31m
+  757.KO (Wrong output) (Wrong return)
+[0m        Expected: [7FFFFFFF7FA4727F7FA4727F7FA4727F  -X57FA4727F], return: 45
+        Got:      [[1m[31m-4.5X7[0mFF[1m[31mF[0mF[1m[31mFFF7FA4727F-10X-X5-.3X[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 757[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5X%X%4X%-10X-X5%-.3X"[0m, [33m2147483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m, [33m2141483647[0m);
+[1m[31m
+  758.KO (Wrong output) (Wrong return)
+[0m        Expected: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF  -X5FFFFFFFF], return: 45
+        Got:      [[1m[31m-4.5X[0mFFFFFFFFFFFFFFFF[1m[31m-10X-X5-.3X[0m], return: 32
+     [0m[1mYou can rerun this test with [0m[33msh test 758[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%-4.5X%X%4X%-10X-X5%-.3X"[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m, -[33m1[0m);
+[1m
+%d, widths, precisions and 0: [0m
+  [32m759.[1mOK[0m [32m760.[1mOK[0m [1m[31m
+  761.KO (Wrong output)
+[0m        Expected: [0000000042], return: 10
+        Got:      [[1m[31m        [0m42[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 761[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010d"[0m, [33m42[0m);
+[1m[31m
+  762.KO (Wrong output)
+[0m        Expected: [000000000000000000000000000000000000042000], return: 42
+        Got:      [[1m[31m                                     [0m42000[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 762[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%042d"[0m, [33m42000[0m);
+[1m[31m
+  763.KO (Wrong output)
+[0m        Expected: [-0000000000000042000], return: 20
+        Got:      [[1m[31m              -[0m42000[0m], return: 20
+     [0m[1mYou can rerun this test with [0m[33msh test 763[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020d"[0m, -[33m42000[0m);
+[1m[31m
+  764.KO (Wrong output)
+[0m        Expected: [wait for it... 00000000000000000000000000000000000000000000000042], return: 65
+        Got:      [wait for it... [1m[31m                                                [0m42[0m], return: 65
+     [0m[1mYou can rerun this test with [0m[33msh test 764[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"wait for it... %050d"[0m, [33m42[0m);
+[1m[31m
+  765.KO (Wrong output)
+[0m        Expected: [00000000000000008000 is how many tests are going to be made], return: 59
+        Got:      [[1m[31m                [0m8000 is how many tests are going to be made[0m], return: 59
+     [0m[1mYou can rerun this test with [0m[33msh test 765[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020d is how many tests are going to be made"[0m, [33m8000[0m);
+[32m766.[1mOK[0m [1m[31m
+  767.KO (Wrong output)
+[0m        Expected: [000000000000000000002147483647], return: 30
+        Got:      [[1m[31m                    [0m2147483647[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 767[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030d"[0m, [33m2147483647[0m);
+[32m768.[1mOK[0m [32m769.[1mOK[0m [1m[31m
+  770.KO (Wrong output)
+[0m        Expected: [-00000000000000000002147483648], return: 30
+        Got:      [[1m[31m                   -[0m2147483648[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 770[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030d"[0m, (int)-[33m2147483648[0m);
+[32m771.[1mOK[0m [32m772.[1mOK[0m [1m[31m
+  773.KO (Wrong output)
+[0m        Expected: [-02147483648], return: 12
+        Got:      [[1m[31m -[0m2147483648[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 773[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  774.KO (Wrong output)
+[0m        Expected: [-02147483648,                    3, 30,                                         -1], return: 82
+        Got:      [[1m[31m -[0m2147483648,                    3, 30,                                         -1[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 774[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012d, %20d, %2d, %42d"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  775.KO (Wrong output)
+[0m        Expected: [-02147483648, 3, 30,                                         -1], return: 63
+        Got:      [[1m[31m -[0m2147483648, 3, 30,                                         -1[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 775[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012d, %d, %2d, %42d"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  776.KO (Wrong output)
+[0m        Expected: [-00021474836480000000000000000000330-1], return: 38
+        Got:      [[1m[31m   -[0m2147483648[1m[31m                   [0m330-1[0m], return: 38
+     [0m[1mYou can rerun this test with [0m[33msh test 776[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014d%020d%02d%0d"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  777.KO (Wrong output)
+[0m        Expected: [-0002147483648c00000000000000000003s30x-1u], return: 42
+        Got:      [[1m[31m   -[0m2147483648c[1m[31m                   [0m3s30x-1u[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 777[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014dc%020ds%02dx%0du"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  778.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 778[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.d"[0m, [33m0[0m);
+[1m[31m
+  779.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 779[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.0d"[0m, [33m0[0m);
+[1m[31m
+  780.KO (Wrong return)
+[0m        Expected: [  ], return: 2
+        Got:      [ [0m], return: 1
+     [0m[1mYou can rerun this test with [0m[33msh test 780[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%02.0d"[0m, [33m0[0m);
+[1m[31m
+  781.KO (Wrong return)
+[0m        Expected: [   ], return: 3
+        Got:      [  [0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 781[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%03.0d"[0m, [33m0[0m);
+[32m782.[1mOK[0m [32m783.[1mOK[0m [32m784.[1mOK[0m [32m785.[1mOK[0m [32m786.[1mOK[0m [32m787.[1mOK[0m [32m788.[1mOK[0m [32m789.[1mOK[0m [32m790.[1mOK[0m [32m791.[1mOK[0m [32m792.[1mOK[0m [32m793.[1mOK[0m [32m794.[1mOK[0m [32m795.[1mOK[0m [32m796.[1mOK[0m [32m797.[1mOK[0m [32m798.[1mOK[0m [32m799.[1mOK[0m [32m800.[1mOK[0m [32m801.[1mOK[0m [32m802.[1mOK[0m [32m803.[1mOK[0m [32m804.[1mOK[0m [32m805.[1mOK[0m [1m[31m
+  806.KO (Wrong output)
+[0m        Expected: [000000000000000000002147483647], return: 30
+        Got:      [[1m[31m                    [0m2147483647[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 806[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030d"[0m, [33m2147483647[0m);
+[32m807.[1mOK[0m [32m808.[1mOK[0m [1m[31m
+  809.KO (Wrong output)
+[0m        Expected: [02147483647], return: 11
+        Got:      [[1m[31m [0m2147483647[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 809[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011d"[0m, [33m2147483647[0m);
+[32m810.[1mOK[0m [1m[31m
+  811.KO (Wrong output)
+[0m        Expected: [-00000000000000000002147483648], return: 30
+        Got:      [[1m[31m                   -[0m2147483648[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 811[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030d"[0m, (int)-[33m2147483648[0m);
+[32m812.[1mOK[0m [32m813.[1mOK[0m [1m[31m
+  814.KO (Wrong output)
+[0m        Expected: [-02147483648], return: 12
+        Got:      [[1m[31m -[0m2147483648[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 814[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012d"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  815.KO (Wrong output)
+[0m        Expected: [-02147483648,                    3, 30, -00000000000000000000000000000000000000001], return: 82
+        Got:      [[1m[31m -[0m2147483648,                    3, 30, [1m[31m                                        -[0m1[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 815[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012d, %20d, %2d, %000042d"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  816.KO (Wrong output)
+[0m        Expected: [-02147483648, 3, 30,                                         -1], return: 63
+        Got:      [[1m[31m -[0m2147483648, 3, 30,                                         -1[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 816[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012d, %d, %002d, %42d"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  817.KO (Wrong output)
+[0m        Expected: [   -21474836480000000000000000000330-00001], return: 42
+        Got:      [   -2147483648[1m[31m                   [0m330-00001[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 817[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%0014.2d%020d%0002.d%000.5d"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  818.KO (Wrong output)
+[0m        Expected: [-0002147483648c00000000000000000003s30x-1u], return: 42
+        Got:      [[1m[31m   -[0m2147483648c[1m[31m                   [0m3s30x-1u[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 818[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014dc%020ds%02dx%0du"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m
+%i, widths, precisions and 0: [0m
+  [32m819.[1mOK[0m [32m820.[1mOK[0m [1m[31m
+  821.KO (Wrong output)
+[0m        Expected: [0000000042], return: 10
+        Got:      [[1m[31m        [0m42[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 821[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010i"[0m, [33m42[0m);
+[1m[31m
+  822.KO (Wrong output)
+[0m        Expected: [000000000000000000000000000000000000042000], return: 42
+        Got:      [[1m[31m                                     [0m42000[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 822[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%042i"[0m, [33m42000[0m);
+[1m[31m
+  823.KO (Wrong output)
+[0m        Expected: [-0000000000000042000], return: 20
+        Got:      [[1m[31m              -[0m42000[0m], return: 20
+     [0m[1mYou can rerun this test with [0m[33msh test 823[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020i"[0m, -[33m42000[0m);
+[1m[31m
+  824.KO (Wrong output)
+[0m        Expected: [wait for it... 00000000000000000000000000000000000000000000000042], return: 65
+        Got:      [wait for it... [1m[31m                                                [0m42[0m], return: 65
+     [0m[1mYou can rerun this test with [0m[33msh test 824[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"wait for it... %050i"[0m, [33m42[0m);
+[1m[31m
+  825.KO (Wrong output)
+[0m        Expected: [00000000000000008000 is how many tests are going to be maie], return: 59
+        Got:      [[1m[31m                [0m8000 is how many tests are going to be maie[0m], return: 59
+     [0m[1mYou can rerun this test with [0m[33msh test 825[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020i is how many tests are going to be maie"[0m, [33m8000[0m);
+[32m826.[1mOK[0m [1m[31m
+  827.KO (Wrong output)
+[0m        Expected: [000000000000000000002147483647], return: 30
+        Got:      [[1m[31m                    [0m2147483647[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 827[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030i"[0m, [33m2147483647[0m);
+[32m828.[1mOK[0m [32m829.[1mOK[0m [1m[31m
+  830.KO (Wrong output)
+[0m        Expected: [-00000000000000000002147483648], return: 30
+        Got:      [[1m[31m                   -[0m2147483648[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 830[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030i"[0m, (int)-[33m2147483648[0m);
+[32m831.[1mOK[0m [32m832.[1mOK[0m [1m[31m
+  833.KO (Wrong output)
+[0m        Expected: [-02147483648], return: 12
+        Got:      [[1m[31m -[0m2147483648[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 833[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  834.KO (Wrong output)
+[0m        Expected: [-02147483648,                    3, 30,                                         -1], return: 82
+        Got:      [[1m[31m -[0m2147483648,                    3, 30,                                         -1[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 834[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012i, %20i, %2i, %42i"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  835.KO (Wrong output)
+[0m        Expected: [-02147483648, 3, 30,                                         -1], return: 63
+        Got:      [[1m[31m -[0m2147483648, 3, 30,                                         -1[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 835[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012i, %i, %2i, %42i"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  836.KO (Wrong output)
+[0m        Expected: [-00021474836480000000000000000000330-1], return: 38
+        Got:      [[1m[31m   -[0m2147483648[1m[31m                   [0m330-1[0m], return: 38
+     [0m[1mYou can rerun this test with [0m[33msh test 836[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014i%020i%02i%0i"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  837.KO (Wrong output)
+[0m        Expected: [-0002147483648c00000000000000000003s30x-1u], return: 42
+        Got:      [[1m[31m   -[0m2147483648c[1m[31m                   [0m3s30x-1u[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 837[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014ic%020is%02ix%0iu"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  838.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 838[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.i"[0m, [33m0[0m);
+[1m[31m
+  839.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 839[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.0i"[0m, [33m0[0m);
+[1m[31m
+  840.KO (Wrong return)
+[0m        Expected: [  ], return: 2
+        Got:      [ [0m], return: 1
+     [0m[1mYou can rerun this test with [0m[33msh test 840[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%02.0i"[0m, [33m0[0m);
+[1m[31m
+  841.KO (Wrong return)
+[0m        Expected: [   ], return: 3
+        Got:      [  [0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 841[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%03.0i"[0m, [33m0[0m);
+[32m842.[1mOK[0m [32m843.[1mOK[0m [32m844.[1mOK[0m [32m845.[1mOK[0m [32m846.[1mOK[0m [32m847.[1mOK[0m [32m848.[1mOK[0m [32m849.[1mOK[0m [32m850.[1mOK[0m [32m851.[1mOK[0m [32m852.[1mOK[0m [32m853.[1mOK[0m [32m854.[1mOK[0m [32m855.[1mOK[0m [32m856.[1mOK[0m [32m857.[1mOK[0m [32m858.[1mOK[0m [32m859.[1mOK[0m [32m860.[1mOK[0m [32m861.[1mOK[0m [32m862.[1mOK[0m [32m863.[1mOK[0m [32m864.[1mOK[0m [32m865.[1mOK[0m [1m[31m
+  866.KO (Wrong output)
+[0m        Expected: [000000000000000000002147483647], return: 30
+        Got:      [[1m[31m                    [0m2147483647[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 866[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030i"[0m, [33m2147483647[0m);
+[32m867.[1mOK[0m [32m868.[1mOK[0m [1m[31m
+  869.KO (Wrong output)
+[0m        Expected: [02147483647], return: 11
+        Got:      [[1m[31m [0m2147483647[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 869[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011i"[0m, [33m2147483647[0m);
+[32m870.[1mOK[0m [1m[31m
+  871.KO (Wrong output)
+[0m        Expected: [-00000000000000000002147483648], return: 30
+        Got:      [[1m[31m                   -[0m2147483648[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 871[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030i"[0m, (int)-[33m2147483648[0m);
+[32m872.[1mOK[0m [32m873.[1mOK[0m [1m[31m
+  874.KO (Wrong output)
+[0m        Expected: [-02147483648], return: 12
+        Got:      [[1m[31m -[0m2147483648[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 874[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012i"[0m, (int)-[33m2147483648[0m);
+[1m[31m
+  875.KO (Wrong output)
+[0m        Expected: [-02147483648,                    3, 30, -00000000000000000000000000000000000000001], return: 82
+        Got:      [[1m[31m -[0m2147483648,                    3, 30, [1m[31m                                        -[0m1[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 875[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012i, %20i, %2i, %000042i"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  876.KO (Wrong output)
+[0m        Expected: [-02147483648, 3, 30,                                         -1], return: 63
+        Got:      [[1m[31m -[0m2147483648, 3, 30,                                         -1[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 876[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012i, %i, %002i, %42i"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  877.KO (Wrong output)
+[0m        Expected: [   -21474836480000000000000000000330-00001], return: 42
+        Got:      [   -2147483648[1m[31m                   [0m330-00001[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 877[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%0014.2i%020i%0002.i%000.5i"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  878.KO (Wrong output)
+[0m        Expected: [-0002147483648c00000000000000000003s30x-1u], return: 42
+        Got:      [[1m[31m   -[0m2147483648c[1m[31m                   [0m3s30x-1u[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 878[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014ic%020is%02ix%0iu"[0m, (int)-[33m2147483648[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m
+%u, widths, precisions and 0: [0m
+  [32m879.[1mOK[0m [32m880.[1mOK[0m [1m[31m
+  881.KO (Wrong output)
+[0m        Expected: [0000000042], return: 10
+        Got:      [[1m[31m        [0m42[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 881[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010u"[0m, [33m42[0m);
+[1m[31m
+  882.KO (Wrong output)
+[0m        Expected: [000000000000000000000000000000000000042000], return: 42
+        Got:      [[1m[31m                                     [0m42000[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 882[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%042u"[0m, [33m42000[0m);
+[1m[31m
+  883.KO (Wrong output)
+[0m        Expected: [00000000004294925296], return: 20
+        Got:      [[1m[31m          [0m4294925296[0m], return: 20
+     [0m[1mYou can rerun this test with [0m[33msh test 883[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020u"[0m, -[33m42000[0m);
+[1m[31m
+  884.KO (Wrong output)
+[0m        Expected: [wait for it... 00000000000000000000000000000000000000000000000042], return: 65
+        Got:      [wait for it... [1m[31m                                                [0m42[0m], return: 65
+     [0m[1mYou can rerun this test with [0m[33msh test 884[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"wait for it... %050u"[0m, [33m42[0m);
+[1m[31m
+  885.KO (Wrong output)
+[0m        Expected: [00000000000000008000 is how many tests are going to be maie], return: 59
+        Got:      [[1m[31m                [0m8000 is how many tests are going to be maie[0m], return: 59
+     [0m[1mYou can rerun this test with [0m[33msh test 885[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020u is how many tests are going to be maie"[0m, [33m8000[0m);
+[32m886.[1mOK[0m [1m[31m
+  887.KO (Wrong output)
+[0m        Expected: [000000000000000000002147483647], return: 30
+        Got:      [[1m[31m                    [0m2147483647[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 887[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030u"[0m, [33m2147483647[0m);
+[32m888.[1mOK[0m [32m889.[1mOK[0m [1m[31m
+  890.KO (Wrong output)
+[0m        Expected: [000000000000000000004294967295], return: 30
+        Got:      [[1m[31m                    [0m4294967295[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 890[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030u"[0m, -[33m1[0m);
+[32m891.[1mOK[0m [1m[31m
+  892.KO (Wrong output)
+[0m        Expected: [04294967295], return: 11
+        Got:      [[1m[31m [0m4294967295[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 892[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011u"[0m, -[33m1[0m);
+[1m[31m
+  893.KO (Wrong output)
+[0m        Expected: [004294967295], return: 12
+        Got:      [[1m[31m  [0m4294967295[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 893[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012u"[0m, -[33m1[0m);
+[1m[31m
+  894.KO (Wrong output)
+[0m        Expected: [004294967295,                    3, 30,                                 4294967295], return: 82
+        Got:      [[1m[31m  [0m4294967295,                    3, 30,                                 4294967295[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 894[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012u, %20u, %2u, %42u"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  895.KO (Wrong output)
+[0m        Expected: [004294967295, 3, 30,                                 4294967295], return: 63
+        Got:      [[1m[31m  [0m4294967295, 3, 30,                                 4294967295[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 895[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012u, %u, %2u, %42u"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  896.KO (Wrong output)
+[0m        Expected: [0000429496729500000000000000000003304294967295], return: 46
+        Got:      [[1m[31m    [0m4294967295[1m[31m                   [0m3304294967295[0m], return: 46
+     [0m[1mYou can rerun this test with [0m[33msh test 896[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014u%020u%02u%0u"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  897.KO (Wrong output)
+[0m        Expected: [00004294967295c00000000000000000003s30x4294967295i], return: 50
+        Got:      [[1m[31m    [0m4294967295c[1m[31m                   [0m3s30x4294967295i[0m], return: 50
+     [0m[1mYou can rerun this test with [0m[33msh test 897[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014uc%020us%02ux%0ui"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  898.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 898[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.u"[0m, [33m0[0m);
+[1m[31m
+  899.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 899[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.0u"[0m, [33m0[0m);
+[1m[31m
+  900.KO (Wrong return)
+[0m        Expected: [  ], return: 2
+        Got:      [ [0m], return: 1
+     [0m[1mYou can rerun this test with [0m[33msh test 900[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%02.0u"[0m, [33m0[0m);
+[1m[31m
+  901.KO (Wrong return)
+[0m        Expected: [   ], return: 3
+        Got:      [  [0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 901[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%03.0u"[0m, [33m0[0m);
+[32m902.[1mOK[0m [32m903.[1mOK[0m [32m904.[1mOK[0m [32m905.[1mOK[0m [32m906.[1mOK[0m [32m907.[1mOK[0m [32m908.[1mOK[0m [32m909.[1mOK[0m [32m910.[1mOK[0m [32m911.[1mOK[0m [32m912.[1mOK[0m [32m913.[1mOK[0m [32m914.[1mOK[0m [32m915.[1mOK[0m [32m916.[1mOK[0m [32m917.[1mOK[0m [32m918.[1mOK[0m [1m[31m
+  919.KO (Wrong output)
+[0m        Expected: [000000000000000000002147483647], return: 30
+        Got:      [[1m[31m                    [0m2147483647[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 919[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030u"[0m, [33m2147483647[0m);
+[32m920.[1mOK[0m [32m921.[1mOK[0m [1m[31m
+  922.KO (Wrong output)
+[0m        Expected: [02147483647], return: 11
+        Got:      [[1m[31m [0m2147483647[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 922[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011u"[0m, [33m2147483647[0m);
+[32m923.[1mOK[0m [1m[31m
+  924.KO (Wrong output)
+[0m        Expected: [000000000000000000004294967295], return: 30
+        Got:      [[1m[31m                    [0m4294967295[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 924[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030u"[0m, -[33m1[0m);
+[32m925.[1mOK[0m [1m[31m
+  926.KO (Wrong output)
+[0m        Expected: [04294967295], return: 11
+        Got:      [[1m[31m [0m4294967295[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 926[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011u"[0m, -[33m1[0m);
+[1m[31m
+  927.KO (Wrong output)
+[0m        Expected: [004294967295], return: 12
+        Got:      [[1m[31m  [0m4294967295[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 927[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012u"[0m, -[33m1[0m);
+[1m[31m
+  928.KO (Wrong output)
+[0m        Expected: [004294967295,                    3, 30, 000000000000000000000000000000004294967295], return: 82
+        Got:      [[1m[31m  [0m4294967295,                    3, 30, [1m[31m                                [0m4294967295[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 928[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012u, %20u, %2u, %000042u"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  929.KO (Wrong output)
+[0m        Expected: [004294967295, 3, 30,                                 4294967295], return: 63
+        Got:      [[1m[31m  [0m4294967295, 3, 30,                                 4294967295[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 929[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012u, %u, %002u, %42u"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  930.KO (Wrong output)
+[0m        Expected: [    429496729500000000000000000003304294967295], return: 46
+        Got:      [    4294967295[1m[31m                   [0m3304294967295[0m], return: 46
+     [0m[1mYou can rerun this test with [0m[33msh test 930[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%0014.2u%020u%0002.u%000.5u"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  931.KO (Wrong output)
+[0m        Expected: [00004294967295c00000000000000000003s30x4294967295i], return: 50
+        Got:      [[1m[31m    [0m4294967295c[1m[31m                   [0m3s30x4294967295i[0m], return: 50
+     [0m[1mYou can rerun this test with [0m[33msh test 931[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014uc%020us%02ux%0ui"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m
+%x, widths, precisions and 0: [0m
+  [32m932.[1mOK[0m [32m933.[1mOK[0m [1m[31m
+  934.KO (Wrong output)
+[0m        Expected: [000000002a], return: 10
+        Got:      [[1m[31m        [0m2a[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 934[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010x"[0m, [33m42[0m);
+[1m[31m
+  935.KO (Wrong output)
+[0m        Expected: [00000000000000000000000000000000000000a410], return: 42
+        Got:      [[1m[31m                                      [0ma410[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 935[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%042x"[0m, [33m42000[0m);
+[1m[31m
+  936.KO (Wrong output)
+[0m        Expected: [000000000000ffff5bf0], return: 20
+        Got:      [[1m[31m            [0mffff5bf0[0m], return: 20
+     [0m[1mYou can rerun this test with [0m[33msh test 936[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020x"[0m, -[33m42000[0m);
+[1m[31m
+  937.KO (Wrong output)
+[0m        Expected: [wait for it... 0000000000000000000000000000000000000000000000002a], return: 65
+        Got:      [wait for it... [1m[31m                                                [0m2a[0m], return: 65
+     [0m[1mYou can rerun this test with [0m[33msh test 937[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"wait for it... %050x"[0m, [33m42[0m);
+[1m[31m
+  938.KO (Wrong output)
+[0m        Expected: [00000000000000001f40 is how many tests are going to be made], return: 59
+        Got:      [[1m[31m                [0m1f40 is how many tests are going to be made[0m], return: 59
+     [0m[1mYou can rerun this test with [0m[33msh test 938[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020x is how many tests are going to be made"[0m, [33m8000[0m);
+[32m939.[1mOK[0m [1m[31m
+  940.KO (Wrong output)
+[0m        Expected: [00000000000000000000007fffffff], return: 30
+        Got:      [[1m[31m                      [0m7fffffff[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 940[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030x"[0m, [33m2147483647[0m);
+[1m[31m
+  941.KO (Wrong output)
+[0m        Expected: [007fffffff], return: 10
+        Got:      [[1m[31m  [0m7fffffff[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 941[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010x"[0m, [33m2147483647[0m);
+[32m942.[1mOK[0m [1m[31m
+  943.KO (Wrong output)
+[0m        Expected: [0000000000000000000000ffffffff], return: 30
+        Got:      [[1m[31m                      [0mffffffff[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 943[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030x"[0m, -[33m1[0m);
+[1m[31m
+  944.KO (Wrong output)
+[0m        Expected: [00ffffffff], return: 10
+        Got:      [[1m[31m  [0mffffffff[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 944[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010x"[0m, -[33m1[0m);
+[1m[31m
+  945.KO (Wrong output)
+[0m        Expected: [000ffffffff], return: 11
+        Got:      [[1m[31m   [0mffffffff[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 945[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011x"[0m, -[33m1[0m);
+[1m[31m
+  946.KO (Wrong output)
+[0m        Expected: [0000ffffffff], return: 12
+        Got:      [[1m[31m    [0mffffffff[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 946[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012x"[0m, -[33m1[0m);
+[1m[31m
+  947.KO (Wrong output)
+[0m        Expected: [0000ffffffff,                    3, 1e,                                   ffffffff], return: 82
+        Got:      [[1m[31m    [0mffffffff,                    3, 1e,                                   ffffffff[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 947[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012x, %20x, %2x, %42x"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  948.KO (Wrong output)
+[0m        Expected: [0000ffffffff, 3, 1e,                                   ffffffff], return: 63
+        Got:      [[1m[31m    [0mffffffff, 3, 1e,                                   ffffffff[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 948[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012x, %x, %2x, %42x"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  949.KO (Wrong output)
+[0m        Expected: [000000ffffffff000000000000000000031effffffff], return: 44
+        Got:      [[1m[31m      [0mffffffff[1m[31m                   [0m31effffffff[0m], return: 44
+     [0m[1mYou can rerun this test with [0m[33msh test 949[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014x%020x%02x%0x"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  950.KO (Wrong output)
+[0m        Expected: [000000ffffffffc00000000000000000003s1eXffffffffi], return: 48
+        Got:      [[1m[31m      [0mffffffffc[1m[31m                   [0m3s1eXffffffffi[0m], return: 48
+     [0m[1mYou can rerun this test with [0m[33msh test 950[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014xc%020xs%02xX%0xi"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  951.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 951[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.x"[0m, [33m0[0m);
+[1m[31m
+  952.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 952[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.0x"[0m, [33m0[0m);
+[1m[31m
+  953.KO (Wrong return)
+[0m        Expected: [  ], return: 2
+        Got:      [ [0m], return: 1
+     [0m[1mYou can rerun this test with [0m[33msh test 953[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%02.0x"[0m, [33m0[0m);
+[1m[31m
+  954.KO (Wrong return)
+[0m        Expected: [   ], return: 3
+        Got:      [  [0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 954[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%03.0x"[0m, [33m0[0m);
+[32m955.[1mOK[0m [32m956.[1mOK[0m [32m957.[1mOK[0m [32m958.[1mOK[0m [32m959.[1mOK[0m [32m960.[1mOK[0m [32m961.[1mOK[0m [32m962.[1mOK[0m [32m963.[1mOK[0m [32m964.[1mOK[0m [32m965.[1mOK[0m [32m966.[1mOK[0m [32m967.[1mOK[0m [32m968.[1mOK[0m [32m969.[1mOK[0m [32m970.[1mOK[0m [32m971.[1mOK[0m [1m[31m
+  972.KO (Wrong output)
+[0m        Expected: [00000000000000000000007fffffff], return: 30
+        Got:      [[1m[31m                      [0m7fffffff[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 972[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030x"[0m, [33m2147483647[0m);
+[1m[31m
+  973.KO (Wrong output)
+[0m        Expected: [07fffffff], return: 9
+        Got:      [[1m[31m [0m7fffffff[0m], return: 9
+     [0m[1mYou can rerun this test with [0m[33msh test 973[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%09x"[0m, [33m2147483647[0m);
+[1m[31m
+  974.KO (Wrong output)
+[0m        Expected: [007fffffff], return: 10
+        Got:      [[1m[31m  [0m7fffffff[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 974[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010x"[0m, [33m2147483647[0m);
+[1m[31m
+  975.KO (Wrong output)
+[0m        Expected: [0007fffffff], return: 11
+        Got:      [[1m[31m   [0m7fffffff[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 975[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011x"[0m, [33m2147483647[0m);
+[32m976.[1mOK[0m [1m[31m
+  977.KO (Wrong output)
+[0m        Expected: [0000000000000000000000ffffffff], return: 30
+        Got:      [[1m[31m                      [0mffffffff[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 977[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030x"[0m, -[33m1[0m);
+[1m[31m
+  978.KO (Wrong output)
+[0m        Expected: [00ffffffff], return: 10
+        Got:      [[1m[31m  [0mffffffff[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 978[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010x"[0m, -[33m1[0m);
+[1m[31m
+  979.KO (Wrong output)
+[0m        Expected: [000ffffffff], return: 11
+        Got:      [[1m[31m   [0mffffffff[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 979[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011x"[0m, -[33m1[0m);
+[1m[31m
+  980.KO (Wrong output)
+[0m        Expected: [0000ffffffff], return: 12
+        Got:      [[1m[31m    [0mffffffff[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 980[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012x"[0m, -[33m1[0m);
+[1m[31m
+  981.KO (Wrong output)
+[0m        Expected: [0000ffffffff,                    3, 1e, 0000000000000000000000000000000000ffffffff], return: 82
+        Got:      [[1m[31m    [0mffffffff,                    3, 1e, [1m[31m                                  [0mffffffff[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 981[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012x, %20x, %2x, %000042x"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  982.KO (Wrong output)
+[0m        Expected: [0000ffffffff, 3, 1e,                                   ffffffff], return: 63
+        Got:      [[1m[31m    [0mffffffff, 3, 1e,                                   ffffffff[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 982[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012x, %x, %002x, %42x"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  983.KO (Wrong output)
+[0m        Expected: [      ffffffff000000000000000000031effffffff], return: 44
+        Got:      [      ffffffff[1m[31m                   [0m31effffffff[0m], return: 44
+     [0m[1mYou can rerun this test with [0m[33msh test 983[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%0014.2x%020x%0002.x%000.5x"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  984.KO (Wrong output)
+[0m        Expected: [000000ffffffffc00000000000000000003s1exffffffffi], return: 48
+        Got:      [[1m[31m      [0mffffffffc[1m[31m                   [0m3s1exffffffffi[0m], return: 48
+     [0m[1mYou can rerun this test with [0m[33msh test 984[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014xc%020xs%02xx%0xi"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m
+%X, widths, precisions and 0: [0m
+  [32m985.[1mOK[0m [32m986.[1mOK[0m [1m[31m
+  987.KO (Wrong output)
+[0m        Expected: [000000002A], return: 10
+        Got:      [[1m[31m        [0m2A[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 987[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010X"[0m, [33m42[0m);
+[1m[31m
+  988.KO (Wrong output)
+[0m        Expected: [00000000000000000000000000000000000000A410], return: 42
+        Got:      [[1m[31m                                      [0mA410[0m], return: 42
+     [0m[1mYou can rerun this test with [0m[33msh test 988[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%042X"[0m, [33m42000[0m);
+[1m[31m
+  989.KO (Wrong output)
+[0m        Expected: [000000000000FFFF5BF0], return: 20
+        Got:      [[1m[31m            [0mFFFF5BF0[0m], return: 20
+     [0m[1mYou can rerun this test with [0m[33msh test 989[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020X"[0m, -[33m42000[0m);
+[1m[31m
+  990.KO (Wrong output)
+[0m        Expected: [wait for it... 0000000000000000000000000000000000000000000000002A], return: 65
+        Got:      [wait for it... [1m[31m                                                [0m2A[0m], return: 65
+     [0m[1mYou can rerun this test with [0m[33msh test 990[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"wait for it... %050X"[0m, [33m42[0m);
+[1m[31m
+  991.KO (Wrong output)
+[0m        Expected: [00000000000000001F40 is how many tests are going to be made], return: 59
+        Got:      [[1m[31m                [0m1F40 is how many tests are going to be made[0m], return: 59
+     [0m[1mYou can rerun this test with [0m[33msh test 991[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%020X is how many tests are going to be made"[0m, [33m8000[0m);
+[32m992.[1mOK[0m [1m[31m
+  993.KO (Wrong output)
+[0m        Expected: [00000000000000000000007FFFFFFF], return: 30
+        Got:      [[1m[31m                      [0m7FFFFFFF[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 993[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030X"[0m, [33m2147483647[0m);
+[1m[31m
+  994.KO (Wrong output)
+[0m        Expected: [007FFFFFFF], return: 10
+        Got:      [[1m[31m  [0m7FFFFFFF[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 994[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010X"[0m, [33m2147483647[0m);
+[32m995.[1mOK[0m [1m[31m
+  996.KO (Wrong output)
+[0m        Expected: [0000000000000000000000FFFFFFFF], return: 30
+        Got:      [[1m[31m                      [0mFFFFFFFF[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 996[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030X"[0m, -[33m1[0m);
+[1m[31m
+  997.KO (Wrong output)
+[0m        Expected: [00FFFFFFFF], return: 10
+        Got:      [[1m[31m  [0mFFFFFFFF[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 997[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010X"[0m, -[33m1[0m);
+[1m[31m
+  998.KO (Wrong output)
+[0m        Expected: [000FFFFFFFF], return: 11
+        Got:      [[1m[31m   [0mFFFFFFFF[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 998[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011X"[0m, -[33m1[0m);
+[1m[31m
+  999.KO (Wrong output)
+[0m        Expected: [0000FFFFFFFF], return: 12
+        Got:      [[1m[31m    [0mFFFFFFFF[0m], return: 12
+     [0m[1mYou can rerun this test with [0m[33msh test 999[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012X"[0m, -[33m1[0m);
+[1m[31m
+  1000.KO (Wrong output)
+[0m        Expected: [0000FFFFFFFF,                    3, 1E,                                   FFFFFFFF], return: 82
+        Got:      [[1m[31m    [0mFFFFFFFF,                    3, 1E,                                   FFFFFFFF[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 1000[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012X, %20X, %2X, %42X"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1001.KO (Wrong output)
+[0m        Expected: [0000FFFFFFFF, 3, 1E,                                   FFFFFFFF], return: 63
+        Got:      [[1m[31m    [0mFFFFFFFF, 3, 1E,                                   FFFFFFFF[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 1001[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012X, %X, %2X, %42X"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1002.KO (Wrong output)
+[0m        Expected: [000000FFFFFFFF000000000000000000031EFFFFFFFF], return: 44
+        Got:      [[1m[31m      [0mFFFFFFFF[1m[31m                   [0m31EFFFFFFFF[0m], return: 44
+     [0m[1mYou can rerun this test with [0m[33msh test 1002[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014X%020X%02X%0X"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1003.KO (Wrong output)
+[0m        Expected: [000000FFFFFFFFc00000000000000000003s1EXFFFFFFFFi], return: 48
+        Got:      [[1m[31m      [0mFFFFFFFFc[1m[31m                   [0m3s1EXFFFFFFFFi[0m], return: 48
+     [0m[1mYou can rerun this test with [0m[33msh test 1003[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014Xc%020Xs%02XX%0Xi"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1004.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 1004[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.X"[0m, [33m0[0m);
+[1m[31m
+  1005.KO (Wrong return)
+[0m        Expected: [ ], return: 1
+        Got:      [[0m], return: 0
+     [0m[1mYou can rerun this test with [0m[33msh test 1005[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%01.0X"[0m, [33m0[0m);
+[1m[31m
+  1006.KO (Wrong return)
+[0m        Expected: [  ], return: 2
+        Got:      [ [0m], return: 1
+     [0m[1mYou can rerun this test with [0m[33msh test 1006[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%02.0X"[0m, [33m0[0m);
+[1m[31m
+  1007.KO (Wrong return)
+[0m        Expected: [   ], return: 3
+        Got:      [  [0m], return: 2
+     [0m[1mYou can rerun this test with [0m[33msh test 1007[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%03.0X"[0m, [33m0[0m);
+[32m1008.[1mOK[0m [32m1009.[1mOK[0m [32m1010.[1mOK[0m [32m1011.[1mOK[0m [32m1012.[1mOK[0m [32m1013.[1mOK[0m [32m1014.[1mOK[0m [32m1015.[1mOK[0m [32m1016.[1mOK[0m [32m1017.[1mOK[0m [32m1018.[1mOK[0m [32m1019.[1mOK[0m [32m1020.[1mOK[0m [32m1021.[1mOK[0m [32m1022.[1mOK[0m [32m1023.[1mOK[0m [1m[31m
+  1024.KO (Wrong output)
+[0m        Expected: [00000000000000000000007FFFFFFF], return: 30
+        Got:      [[1m[31m                      [0m7FFFFFFF[0m], return: 30
+     [0m[1mYou can rerun this test with [0m[33msh test 1024[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%030X"[0m, [33m2147483647[0m);
+[1m[31m
+  1025.KO (Wrong output)
+[0m        Expected: [07FFFFFFF], return: 9
+        Got:      [[1m[31m [0m7FFFFFFF[0m], return: 9
+     [0m[1mYou can rerun this test with [0m[33msh test 1025[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%09X"[0m, [33m2147483647[0m);
+[1m[31m
+  1026.KO (Wrong output)
+[0m        Expected: [007FFFFFFF], return: 10
+        Got:      [[1m[31m  [0m7FFFFFFF[0m], return: 10
+     [0m[1mYou can rerun this test with [0m[33msh test 1026[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%010X"[0m, [33m2147483647[0m);
+[1m[31m
+  1027.KO (Wrong output)
+[0m        Expected: [0007FFFFFFF], return: 11
+        Got:      [[1m[31m   [0m7FFFFFFF[0m], return: 11
+     [0m[1mYou can rerun this test with [0m[33msh test 1027[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%011X"[0m, [33m2147483647[0m);
+[32m1028.[1mOK[0m [32m1029.[1mOK[0m [32m1030.[1mOK[0m [32m1031.[1mOK[0m [32m1032.[1mOK[0m [1m[31m
+  1033.KO (Wrong output)
+[0m        Expected: [0000FFFFFFFF,                    3, 1E,                       000000000000FFFFFFFF], return: 82
+        Got:      [[1m[31m    [0mFFFFFFFF,                    3, 1E,                       000000000000FFFFFFFF[0m], return: 82
+     [0m[1mYou can rerun this test with [0m[33msh test 1033[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012X, %20X, %2X, %000042.20X"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1034.KO (Wrong output)
+[0m        Expected: [0000FFFFFFFF, 3, 1E,                                   FFFFFFFF], return: 63
+        Got:      [[1m[31m    [0mFFFFFFFF, 3, 1E,                                   FFFFFFFF[0m], return: 63
+     [0m[1mYou can rerun this test with [0m[33msh test 1034[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%012X, %X, %002X, %42.5X"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1035.KO (Wrong output)
+[0m        Expected: [      FFFFFFFF000000000000000000031EFFFFFFFF], return: 44
+        Got:      [      FFFFFFFF[1m[31m                   [0m31EFFFFFFFF[0m], return: 44
+     [0m[1mYou can rerun this test with [0m[33msh test 1035[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%0014.2X%020X%0002.X%000.5X"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+[1m[31m
+  1036.KO (Wrong output)
+[0m        Expected: [000000FFFFFFFFc00000000000000000003s0001EXFFFFFFFFi], return: 51
+        Got:      [[1m[31m      [0mFFFFFFFFc[1m[31m                   [0m3s0001EXFFFFFFFFi[0m], return: 51
+     [0m[1mYou can rerun this test with [0m[33msh test 1036[0m
+     The function was called like this:
+   [34mft_printf[0m([32m"%014Xc%020Xs%02.5XX%0.Xi"[0m, -[33m1[0m, [33m3[0m, [33m30[0m, -[33m1[0m);
+
+[0m
+Tests run: 936 out of 1140
+Tests OK:  476 (50%)
