@@ -5,38 +5,33 @@
 #                                                     +:+ +:+         +:+      #
 #    By: greita <greita@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/02/23 13:55:33 by greita            #+#    #+#              #
-#    Updated: 2022/03/12 13:13:25 by greita           ###   ########.fr        #
+#    Created: 2022/03/14 08:59:10 by greita            #+#    #+#              #
+#    Updated: 2022/03/14 11:44:38 by greita           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		pipex
+NAME = 		fdf
 
-NAME_B =	pipex_bonus
+NAME_B =	fdf_bonus
 
-SRC =		mandatory/cmds.c	\
-			mandatory/init.c	\
-			mandatory/init2.c	\
-			mandatory/close.c	\
-			mandatory/pipex.c
-
-SRC_B =		bonus/cmds_bonus.c	\
-			bonus/init_bonus.c	\
-			bonus/init2_bonus.c	\
-			bonus/close_bonus.c	\
-			bonus/pipex_bonus.c
+SRC =		src/fdf.c	\
+			src/drawline.c	\
+			src/parser.c	\
+			src/parser_utils.c	\
+			src/draw.c \
+			src/draw_utils.c \
+			src/keyhook.c \
+			src/keyhook_utils.c
 
 OBJ = 		$(SRC:.c=.o)
-
-OBJ_B = 	$(SRC_B:.c=.o)
 
 CC =		gcc
 
 FLAGS =		-Wall -Wextra -Werror
 
-D_FILES =	$(SRC:.c=.d)
+FRAMEWORK =	-framework OpenGL -framework AppKit
 
-D_FILES_B =	$(SRC_B:.c=.d)
+D_FILES =	$(SRC:.c=.d)
 
 %.o :		%.c
 	$(CC) $(FLAGS) -c $< -o $@ -MMD
@@ -49,15 +44,18 @@ bonus:		$(NAME_B)
 
 $(NAME) :	$(OBJ)
 	make all -C ./libft
-	$(CC) $(FLAGS) $(OBJ) ./libft/libft.a -o $(NAME)
+	make all -C ./mlx
+	$(CC) $(FLAGS) $(OBJ) $(FRAMEWORK) ./libft/libft.a ./mlx/libmlx.a -o $(NAME)
 
-$(NAME_B) :	$(OBJ_B)
+$(NAME_B) :	$(OBJ)
 	make all -C ./libft
-	$(CC) $(FLAGS) $(OBJ_B) ./libft/libft.a -o $(NAME_B)
+	make all -C ./mlx
+	$(CC) $(FLAGS) $(OBJ) $(FRAMEWORK) ./libft/libft.a ./mlx/libmlx.a -o $(NAME_B)
 
 clean :
 	make clean -C ./libft
-	rm -f $(OBJ) $(OBJ_B) $(D_FILES) $(D_FILES_B)
+	make clean -C ./mlx
+	rm -f $(OBJ) $(OBJ_B) $(D_FILES)
 
 fclean :	clean
 	rm -f ./libft/libft.a
