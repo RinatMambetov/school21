@@ -6,7 +6,7 @@
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:43:39 by greita            #+#    #+#             */
-/*   Updated: 2022/03/13 21:46:50 by greita           ###   ########.fr       */
+/*   Updated: 2022/03/16 21:13:12 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 void	ft_rotate(t_vars *vars)
 {
 	vars->x1 = vars->x1 * cos(vars->angle_y) + vars->z1 * sin(vars->angle_y);
-	vars->y1 = vars->y1 * cos(vars->angle_x) - vars->z1 * sin(vars->angle_x);
 	vars->x2 = vars->x2 * cos(vars->angle_y) + vars->z2 * sin(vars->angle_y);
+	vars->y1 = vars->y1 * cos(vars->angle_x) - vars->z1 * sin(vars->angle_x);
 	vars->y2 = vars->y2 * cos(vars->angle_x) - vars->z2 * sin(vars->angle_x);
 }
 
 void	ft_isometric(t_vars *vars)
 {
 	vars->x1 = vars->x1 * cos(vars->angle_z) - vars->y1 * sin(vars->angle_z);
-	vars->y1 = vars->x1 * sin(vars->angle_z) + vars->y1 * cos(vars->angle_z);
 	vars->x2 = vars->x2 * cos(vars->angle_z) - vars->y2 * sin(vars->angle_z);
+	vars->y1 = vars->x1 * sin(vars->angle_z) + vars->y1 * cos(vars->angle_z);
 	vars->y2 = vars->x2 * sin(vars->angle_z) + vars->y2 * cos(vars->angle_z);
 }
 
