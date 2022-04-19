@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/17 09:03:44 by greita            #+#    #+#             */
-/*   Updated: 2022/04/07 19:33:26 by greita           ###   ########.fr       */
+/*   Created: 2022/04/11 12:45:27 by greita            #+#    #+#             */
+/*   Updated: 2022/04/11 12:45:30 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	int				neg;
-	unsigned int	num;
+	size_t	i;
 
-	neg = 1;
-	num = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (ft_isdigit(*str))
+	i = 0;
+	while (i < n)
 	{
-		num = num * 10 + (*str - '0');
-		str++;
+		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
+		if (*(unsigned char *)(src + i) == (unsigned char) c)
+			return (dest + i + 1);
+		i++;
 	}
-	if (num - 1 > INT_MAX && neg == -1)
-		return ((int)(-num));
-	if (num > INT_MAX && neg == 1)
-		return ((int)num);
-	return (neg * num);
+	return (NULL);
 }

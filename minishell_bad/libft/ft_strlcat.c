@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/17 09:03:44 by greita            #+#    #+#             */
-/*   Updated: 2022/04/07 19:33:26 by greita           ###   ########.fr       */
+/*   Created: 2022/04/11 12:51:51 by greita            #+#    #+#             */
+/*   Updated: 2022/04/11 12:51:52 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int				neg;
-	unsigned int	num;
+	size_t	i;
+	size_t	j;
+	size_t	res;
 
-	neg = 1;
-	num = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (ft_isdigit(*str))
+	i = 0;
+	j = 0;
+	res = 0;
+	while (dst[i] != '\0' && i < dstsize)
+		i++;
+	while (src[res] != '\0')
+		res++;
+	if (dstsize <= i)
+		res += dstsize;
+	else
+		res += i;
+	while (src[j] != '\0' && (i + 1) < dstsize)
 	{
-		num = num * 10 + (*str - '0');
-		str++;
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
-	if (num - 1 > INT_MAX && neg == -1)
-		return ((int)(-num));
-	if (num > INT_MAX && neg == 1)
-		return ((int)num);
-	return (neg * num);
+	if (i < dstsize)
+		dst[i] = '\0';
+	return (res);
 }

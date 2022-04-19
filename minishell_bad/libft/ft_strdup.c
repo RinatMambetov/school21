@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/17 09:03:44 by greita            #+#    #+#             */
-/*   Updated: 2022/04/07 19:33:26 by greita           ###   ########.fr       */
+/*   Created: 2022/04/11 12:51:45 by greita            #+#    #+#             */
+/*   Updated: 2022/04/11 12:51:46 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	int				neg;
-	unsigned int	num;
+	char	*tmp;
+	size_t	i;
 
-	neg = 1;
-	num = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (ft_isdigit(*str))
+	tmp = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!tmp)
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		num = num * 10 + (*str - '0');
-		str++;
+		tmp[i] = s1[i];
+		i++;
 	}
-	if (num - 1 > INT_MAX && neg == -1)
-		return ((int)(-num));
-	if (num > INT_MAX && neg == 1)
-		return ((int)num);
-	return (neg * num);
+	tmp[i] = s1[i];
+	return (tmp);
 }

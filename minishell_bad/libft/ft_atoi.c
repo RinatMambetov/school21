@@ -5,34 +5,44 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/17 09:03:44 by greita            #+#    #+#             */
-/*   Updated: 2022/04/07 19:33:26 by greita           ###   ########.fr       */
+/*   Created: 2022/04/11 12:46:02 by greita            #+#    #+#             */
+/*   Updated: 2022/04/11 12:46:03 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_res_check(unsigned int c, int sign)
+{
+	if (c > 2147483648 && sign == -1)
+		return (0);
+	if (c > INT_MAX && sign == 1)
+		return (-1);
+	return (c);
+}
+
 int	ft_atoi(const char *str)
 {
-	int				neg;
-	unsigned int	num;
+	int				sign;
+	unsigned int	res;
+	size_t			i;
 
-	neg = 1;
-	num = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (ft_isdigit(*str))
+	sign = 1;
+	res = 0;
+	i = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == 32)
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		num = num * 10 + (*str - '0');
-		str++;
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	if (num - 1 > INT_MAX && neg == -1)
-		return ((int)(-num));
-	if (num > INT_MAX && neg == 1)
-		return ((int)num);
-	return (neg * num);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	res = ft_res_check(res, sign);
+	return (res * sign);
 }

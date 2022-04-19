@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greita <greita@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/17 09:03:44 by greita            #+#    #+#             */
-/*   Updated: 2022/04/07 19:33:26 by greita           ###   ########.fr       */
+/*   Created: 2022/04/11 12:51:59 by greita            #+#    #+#             */
+/*   Updated: 2022/04/11 12:52:01 by greita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strmapi(char const *s1, char (*f)(unsigned int, char))
 {
-	int				neg;
-	unsigned int	num;
+	char	*str;
+	size_t	i;
 
-	neg = 1;
-	num = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (ft_isdigit(*str))
+	if (s1 == NULL)
+		return (NULL);
+	str = ft_strdup(s1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (str[i])
 	{
-		num = num * 10 + (*str - '0');
-		str++;
+		str[i] = (*f)(i, str[i]);
+		i++;
 	}
-	if (num - 1 > INT_MAX && neg == -1)
-		return ((int)(-num));
-	if (num > INT_MAX && neg == 1)
-		return ((int)num);
-	return (neg * num);
+	return (str);
 }
