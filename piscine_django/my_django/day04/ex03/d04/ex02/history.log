@@ -1,0 +1,16 @@
+Not Found: /
+"GET / HTTP/1.1" 404 2806
+Internal Server Error: /ex03/
+Traceback (most recent call last):
+  File "/Users/rinat/mydev/piscine_django/my_django/day04/ex03/django_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/rinat/mydev/piscine_django/my_django/day04/ex03/django_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/rinat/mydev/piscine_django/my_django/day04/ex03/d04/ex03/views.py", line 8, in index2
+    "range": [
+  File "/Users/rinat/mydev/piscine_django/my_django/day04/ex03/d04/ex03/views.py", line 9, in <listcomp>
+    "{02X}".format(int(i * step)) for i in range(50)
+KeyError: '02X'
+"GET /ex03/ HTTP/1.1" 500 63460
+Not Found: /signup/
+"GET /signup/ HTTP/1.1" 404 2845
